@@ -19,7 +19,7 @@ Ograniczyliśmy skłandnię do następujących struktur, które nie mogą być w
 - wcięte bloki kodu
 - odgrodzone bloki kodu (oznaczone przez dokładnie 3 `` ` `` lub `~` i zawsze poprawnie zamknięte) 
 - Cytaty blokowe (nie są kontynuowane w następnej linii, jeśli nie rozpoczyna się znakiem `>`)
-- obrazy (tylko lokalne pliki)
+- obrazy
 - Tabele
 
 W samym tekście stylizowane są na razie tylko linki do stron internetowych.
