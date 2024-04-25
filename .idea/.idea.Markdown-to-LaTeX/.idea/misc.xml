@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ANTLRGenerationPreferences">
+    <option name="perGrammarGenerationSettings">
+      <list>
+        <PerGrammarGenerationSettings>
+          <option name="fileName" value="$PROJECT_DIR$/Markdown-to-LaTeX/MarkdownParser.g4" />
+          <option name="autoGen" value="true" />
+          <option name="outputDir" value="C:\Users\artur\RiderProjects\Markdown-to-LaTeX\Markdown-to-LaTeX" />
+          <option name="libDir" value="C:\Users\artur\RiderProjects\Markdown-to-LaTeX\Markdown-to-LaTeX" />
+          <option name="encoding" value="utf-8" />
+          <option name="pkg" value="MarkdownParsing" />
+          <option name="language" value="CSharp" />
+          <option name="generateVisitor" value="true" />
+        </PerGrammarGenerationSettings>
+      </list>
+    </option>
+  </component>
+</project>
