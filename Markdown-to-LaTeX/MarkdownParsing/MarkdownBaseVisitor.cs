@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:/Users/artur/RiderProjects/Markdown-to-LaTeX/Markdown-to-LaTeX/MarkdownParser.g4 by ANTLR 4.13.1
+// Generated from C:/Users/artur/RiderProjects/Markdown-to-LaTeX/Markdown-to-LaTeX/Markdown.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -26,7 +26,7 @@ using IToken = Antlr4.Runtime.IToken;
 using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 
 /// <summary>
-/// This class provides an empty implementation of <see cref="IMarkdownParserVisitor{Result}"/>,
+/// This class provides an empty implementation of <see cref="IMarkdownVisitor{Result}"/>,
 /// which can be extended to create a visitor which only needs to handle a subset
 /// of the available methods.
 /// </summary>
@@ -34,9 +34,9 @@ using ParserRuleContext = Antlr4.Runtime.ParserRuleContext;
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.13.1")]
 [System.Diagnostics.DebuggerNonUserCode]
 [System.CLSCompliant(false)]
-public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IMarkdownParserVisitor<Result> {
+public partial class MarkdownBaseVisitor<Result> : AbstractParseTreeVisitor<Result>, IMarkdownVisitor<Result> {
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.document"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.document"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -44,9 +44,10 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDocument([NotNull] MarkdownParser.DocumentContext context) { return VisitChildren(context); }
+	public virtual Result VisitDocument([NotNull] Markdown.DocumentContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.heading"/>.
+	/// Visit a parse tree produced by the <c>atxHeading</c>
+	/// labeled alternative in <see cref="Markdown.heading"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -54,9 +55,10 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHeading([NotNull] MarkdownParser.HeadingContext context) { return VisitChildren(context); }
+	public virtual Result VisitAtxHeading([NotNull] Markdown.AtxHeadingContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.emptyHeading"/>.
+	/// Visit a parse tree produced by the <c>setextHeading</c>
+	/// labeled alternative in <see cref="Markdown.heading"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -64,9 +66,10 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEmptyHeading([NotNull] MarkdownParser.EmptyHeadingContext context) { return VisitChildren(context); }
+	public virtual Result VisitSetextHeading([NotNull] Markdown.SetextHeadingContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.atxHeading"/>.
+	/// Visit a parse tree produced by the <c>emptyHeading</c>
+	/// labeled alternative in <see cref="Markdown.heading"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -74,9 +77,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitAtxHeading([NotNull] MarkdownParser.AtxHeadingContext context) { return VisitChildren(context); }
+	public virtual Result VisitEmptyHeading([NotNull] Markdown.EmptyHeadingContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.headingStart"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.headingStart"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -84,9 +87,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHeadingStart([NotNull] MarkdownParser.HeadingStartContext context) { return VisitChildren(context); }
+	public virtual Result VisitHeadingStart([NotNull] Markdown.HeadingStartContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.horizontalLine"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.setextEnd"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -94,9 +97,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHorizontalLine([NotNull] MarkdownParser.HorizontalLineContext context) { return VisitChildren(context); }
+	public virtual Result VisitSetextEnd([NotNull] Markdown.SetextEndContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.hLineDBegin"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.horizontalLine"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -104,9 +107,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHLineDBegin([NotNull] MarkdownParser.HLineDBeginContext context) { return VisitChildren(context); }
+	public virtual Result VisitHorizontalLine([NotNull] Markdown.HorizontalLineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.hLineUBegin"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.hLineDBegin"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -114,9 +117,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHLineUBegin([NotNull] MarkdownParser.HLineUBeginContext context) { return VisitChildren(context); }
+	public virtual Result VisitHLineDBegin([NotNull] Markdown.HLineDBeginContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.hLineSBegin"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.hLineUBegin"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -124,9 +127,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHLineSBegin([NotNull] MarkdownParser.HLineSBeginContext context) { return VisitChildren(context); }
+	public virtual Result VisitHLineUBegin([NotNull] Markdown.HLineUBeginContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.indent3"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.hLineSBegin"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -134,9 +137,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIndent3([NotNull] MarkdownParser.Indent3Context context) { return VisitChildren(context); }
+	public virtual Result VisitHLineSBegin([NotNull] Markdown.HLineSBeginContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.indent2"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.indent3"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -144,9 +147,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIndent2([NotNull] MarkdownParser.Indent2Context context) { return VisitChildren(context); }
+	public virtual Result VisitIndent3([NotNull] Markdown.Indent3Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.indent1"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.indent2"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -154,9 +157,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIndent1([NotNull] MarkdownParser.Indent1Context context) { return VisitChildren(context); }
+	public virtual Result VisitIndent2([NotNull] Markdown.Indent2Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.fencedCode"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.indent1"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -164,9 +167,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitFencedCode([NotNull] MarkdownParser.FencedCodeContext context) { return VisitChildren(context); }
+	public virtual Result VisitIndent1([NotNull] Markdown.Indent1Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.indentedCodeBlock"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.fencedCode"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -174,9 +177,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIndentedCodeBlock([NotNull] MarkdownParser.IndentedCodeBlockContext context) { return VisitChildren(context); }
+	public virtual Result VisitFencedCode([NotNull] Markdown.FencedCodeContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.indentedCode1"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.indentedCodeBlock"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -184,9 +187,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIndentedCode1([NotNull] MarkdownParser.IndentedCode1Context context) { return VisitChildren(context); }
+	public virtual Result VisitIndentedCodeBlock([NotNull] Markdown.IndentedCodeBlockContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.list"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.indentedCode1"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -194,9 +197,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitList([NotNull] MarkdownParser.ListContext context) { return VisitChildren(context); }
+	public virtual Result VisitIndentedCode1([NotNull] Markdown.IndentedCode1Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.list1"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.list"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -204,9 +207,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitList1([NotNull] MarkdownParser.List1Context context) { return VisitChildren(context); }
+	public virtual Result VisitList([NotNull] Markdown.ListContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.list2"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.list1"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -214,9 +217,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitList2([NotNull] MarkdownParser.List2Context context) { return VisitChildren(context); }
+	public virtual Result VisitList1([NotNull] Markdown.List1Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.list3"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.list2"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -224,9 +227,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitList3([NotNull] MarkdownParser.List3Context context) { return VisitChildren(context); }
+	public virtual Result VisitList2([NotNull] Markdown.List2Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iList3"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.list3"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -234,9 +237,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIList3([NotNull] MarkdownParser.IList3Context context) { return VisitChildren(context); }
+	public virtual Result VisitList3([NotNull] Markdown.List3Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iList2"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iList3"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -244,9 +247,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIList2([NotNull] MarkdownParser.IList2Context context) { return VisitChildren(context); }
+	public virtual Result VisitIList3([NotNull] Markdown.IList3Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iList1"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iList2"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -254,9 +257,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIList1([NotNull] MarkdownParser.IList1Context context) { return VisitChildren(context); }
+	public virtual Result VisitIList2([NotNull] Markdown.IList2Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iList0"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iList1"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -264,9 +267,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIList0([NotNull] MarkdownParser.IList0Context context) { return VisitChildren(context); }
+	public virtual Result VisitIList1([NotNull] Markdown.IList1Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iListItem3"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iList0"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -274,9 +277,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIListItem3([NotNull] MarkdownParser.IListItem3Context context) { return VisitChildren(context); }
+	public virtual Result VisitIList0([NotNull] Markdown.IList0Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iListItem2"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iListItem3"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -284,9 +287,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIListItem2([NotNull] MarkdownParser.IListItem2Context context) { return VisitChildren(context); }
+	public virtual Result VisitIListItem3([NotNull] Markdown.IListItem3Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iListItem1"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iListItem2"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -294,9 +297,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIListItem1([NotNull] MarkdownParser.IListItem1Context context) { return VisitChildren(context); }
+	public virtual Result VisitIListItem2([NotNull] Markdown.IListItem2Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iListItem0"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iListItem1"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -304,9 +307,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIListItem0([NotNull] MarkdownParser.IListItem0Context context) { return VisitChildren(context); }
+	public virtual Result VisitIListItem1([NotNull] Markdown.IListItem1Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.iListBegin"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iListItem0"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -314,9 +317,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitIListBegin([NotNull] MarkdownParser.IListBeginContext context) { return VisitChildren(context); }
+	public virtual Result VisitIListItem0([NotNull] Markdown.IListItem0Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eList3"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.iListBegin"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -324,9 +327,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEList3([NotNull] MarkdownParser.EList3Context context) { return VisitChildren(context); }
+	public virtual Result VisitIListBegin([NotNull] Markdown.IListBeginContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eList2"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eList3"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -334,9 +337,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEList2([NotNull] MarkdownParser.EList2Context context) { return VisitChildren(context); }
+	public virtual Result VisitEList3([NotNull] Markdown.EList3Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eList1"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eList2"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -344,9 +347,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEList1([NotNull] MarkdownParser.EList1Context context) { return VisitChildren(context); }
+	public virtual Result VisitEList2([NotNull] Markdown.EList2Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eList0"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eList1"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -354,9 +357,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEList0([NotNull] MarkdownParser.EList0Context context) { return VisitChildren(context); }
+	public virtual Result VisitEList1([NotNull] Markdown.EList1Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eListItem3"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eList0"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -364,9 +367,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEListItem3([NotNull] MarkdownParser.EListItem3Context context) { return VisitChildren(context); }
+	public virtual Result VisitEList0([NotNull] Markdown.EList0Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eListItem2"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eListItem3"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -374,9 +377,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEListItem2([NotNull] MarkdownParser.EListItem2Context context) { return VisitChildren(context); }
+	public virtual Result VisitEListItem3([NotNull] Markdown.EListItem3Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eListItem1"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eListItem2"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -384,9 +387,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEListItem1([NotNull] MarkdownParser.EListItem1Context context) { return VisitChildren(context); }
+	public virtual Result VisitEListItem2([NotNull] Markdown.EListItem2Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eListItem0"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eListItem1"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -394,9 +397,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEListItem0([NotNull] MarkdownParser.EListItem0Context context) { return VisitChildren(context); }
+	public virtual Result VisitEListItem1([NotNull] Markdown.EListItem1Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.eListBegin"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eListItem0"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -404,9 +407,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEListBegin([NotNull] MarkdownParser.EListBeginContext context) { return VisitChildren(context); }
+	public virtual Result VisitEListItem0([NotNull] Markdown.EListItem0Context context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.blockQuote"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.eListBegin"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -414,9 +417,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBlockQuote([NotNull] MarkdownParser.BlockQuoteContext context) { return VisitChildren(context); }
+	public virtual Result VisitEListBegin([NotNull] Markdown.EListBeginContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.blockQuoteLine"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.blockQuote"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -424,9 +427,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBlockQuoteLine([NotNull] MarkdownParser.BlockQuoteLineContext context) { return VisitChildren(context); }
+	public virtual Result VisitBlockQuote([NotNull] Markdown.BlockQuoteContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.emptyBlockQuoteLine"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.blockQuoteLine"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -434,9 +437,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitEmptyBlockQuoteLine([NotNull] MarkdownParser.EmptyBlockQuoteLineContext context) { return VisitChildren(context); }
+	public virtual Result VisitBlockQuoteLine([NotNull] Markdown.BlockQuoteLineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.blockQuoteStart"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.emptyBlockQuoteLine"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -444,9 +447,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitBlockQuoteStart([NotNull] MarkdownParser.BlockQuoteStartContext context) { return VisitChildren(context); }
+	public virtual Result VisitEmptyBlockQuoteLine([NotNull] Markdown.EmptyBlockQuoteLineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.table"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.blockQuoteStart"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -454,9 +457,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTable([NotNull] MarkdownParser.TableContext context) { return VisitChildren(context); }
+	public virtual Result VisitBlockQuoteStart([NotNull] Markdown.BlockQuoteStartContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.headerRow"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.table"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -464,9 +467,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHeaderRow([NotNull] MarkdownParser.HeaderRowContext context) { return VisitChildren(context); }
+	public virtual Result VisitTable([NotNull] Markdown.TableContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.contentRow"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.headerRow"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -474,9 +477,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitContentRow([NotNull] MarkdownParser.ContentRowContext context) { return VisitChildren(context); }
+	public virtual Result VisitHeaderRow([NotNull] Markdown.HeaderRowContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.cellContent"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.contentRow"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -484,9 +487,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitCellContent([NotNull] MarkdownParser.CellContentContext context) { return VisitChildren(context); }
+	public virtual Result VisitContentRow([NotNull] Markdown.ContentRowContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.separatorRow"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.cellContent"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -494,9 +497,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSeparatorRow([NotNull] MarkdownParser.SeparatorRowContext context) { return VisitChildren(context); }
+	public virtual Result VisitCellContent([NotNull] Markdown.CellContentContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.separatorContent"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.separatorRow"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -504,9 +507,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitSeparatorContent([NotNull] MarkdownParser.SeparatorContentContext context) { return VisitChildren(context); }
+	public virtual Result VisitSeparatorRow([NotNull] Markdown.SeparatorRowContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.imageLine"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.separatorContent"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -514,9 +517,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitImageLine([NotNull] MarkdownParser.ImageLineContext context) { return VisitChildren(context); }
+	public virtual Result VisitSeparatorContent([NotNull] Markdown.SeparatorContentContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.textLine"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.imageLine"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -524,9 +527,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTextLine([NotNull] MarkdownParser.TextLineContext context) { return VisitChildren(context); }
+	public virtual Result VisitImageLine([NotNull] Markdown.ImageLineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.requiredText"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.textLine"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -534,9 +537,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitRequiredText([NotNull] MarkdownParser.RequiredTextContext context) { return VisitChildren(context); }
+	public virtual Result VisitTextLine([NotNull] Markdown.TextLineContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.optionalText"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.requiredText"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -544,9 +547,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitOptionalText([NotNull] MarkdownParser.OptionalTextContext context) { return VisitChildren(context); }
+	public virtual Result VisitRequiredText([NotNull] Markdown.RequiredTextContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.displayText"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.optionalText"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -554,9 +557,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitDisplayText([NotNull] MarkdownParser.DisplayTextContext context) { return VisitChildren(context); }
+	public virtual Result VisitOptionalText([NotNull] Markdown.OptionalTextContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.linkText"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.displayText"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -564,9 +567,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLinkText([NotNull] MarkdownParser.LinkTextContext context) { return VisitChildren(context); }
+	public virtual Result VisitDisplayText([NotNull] Markdown.DisplayTextContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.urlText"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.linkText"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -574,9 +577,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitUrlText([NotNull] MarkdownParser.UrlTextContext context) { return VisitChildren(context); }
+	public virtual Result VisitLinkText([NotNull] Markdown.LinkTextContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.headingText"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.urlText"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -584,9 +587,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitHeadingText([NotNull] MarkdownParser.HeadingTextContext context) { return VisitChildren(context); }
+	public virtual Result VisitUrlText([NotNull] Markdown.UrlTextContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.link"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.headingText"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -594,9 +597,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitLink([NotNull] MarkdownParser.LinkContext context) { return VisitChildren(context); }
+	public virtual Result VisitHeadingText([NotNull] Markdown.HeadingTextContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.urlLink"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.fencedText"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -604,9 +607,9 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitUrlLink([NotNull] MarkdownParser.UrlLinkContext context) { return VisitChildren(context); }
+	public virtual Result VisitFencedText([NotNull] Markdown.FencedTextContext context) { return VisitChildren(context); }
 	/// <summary>
-	/// Visit a parse tree produced by <see cref="MarkdownParser.textLink"/>.
+	/// Visit a parse tree produced by <see cref="Markdown.link"/>.
 	/// <para>
 	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
 	/// on <paramref name="context"/>.
@@ -614,6 +617,26 @@ public partial class MarkdownParserBaseVisitor<Result> : AbstractParseTreeVisito
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
-	public virtual Result VisitTextLink([NotNull] MarkdownParser.TextLinkContext context) { return VisitChildren(context); }
+	public virtual Result VisitLink([NotNull] Markdown.LinkContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="Markdown.urlLink"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitUrlLink([NotNull] Markdown.UrlLinkContext context) { return VisitChildren(context); }
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="Markdown.textLink"/>.
+	/// <para>
+	/// The default implementation returns the result of calling <see cref="AbstractParseTreeVisitor{Result}.VisitChildren(IRuleNode)"/>
+	/// on <paramref name="context"/>.
+	/// </para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	public virtual Result VisitTextLink([NotNull] Markdown.TextLinkContext context) { return VisitChildren(context); }
 }
 } // namespace MarkdownParsing

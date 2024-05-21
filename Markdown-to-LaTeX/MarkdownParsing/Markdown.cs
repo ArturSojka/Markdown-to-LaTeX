@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// Generated from C:/Users/artur/RiderProjects/Markdown-to-LaTeX/Markdown-to-LaTeX/MarkdownParser.g4 by ANTLR 4.13.1
+// Generated from C:/Users/artur/RiderProjects/Markdown-to-LaTeX/Markdown-to-LaTeX/Markdown.g4 by ANTLR 4.13.1
 
 // Unreachable code detected
 #pragma warning disable 0162
@@ -33,7 +33,7 @@ using DFA = Antlr4.Runtime.Dfa.DFA;
 
 [System.CodeDom.Compiler.GeneratedCode("ANTLR", "4.13.1")]
 [System.CLSCompliant(false)]
-public partial class MarkdownParser : Parser {
+public partial class Markdown : Parser {
 	protected static DFA[] decisionToDFA;
 	protected static PredictionContextCache sharedContextCache = new PredictionContextCache();
 	public const int
@@ -49,24 +49,23 @@ public partial class MarkdownParser : Parser {
 		Amp=55, Comma=56, Equal=57, Question=58, At=59, Carrot=60, Underscore=61, 
 		Pipe=62, Tilde=63, Dash=64, Star=65, Plus=66, Code=67, Digit=68, Other=69;
 	public const int
-		RULE_document = 0, RULE_heading = 1, RULE_emptyHeading = 2, RULE_atxHeading = 3, 
-		RULE_headingStart = 4, RULE_horizontalLine = 5, RULE_hLineDBegin = 6, 
-		RULE_hLineUBegin = 7, RULE_hLineSBegin = 8, RULE_indent3 = 9, RULE_indent2 = 10, 
-		RULE_indent1 = 11, RULE_fencedCode = 12, RULE_indentedCodeBlock = 13, 
-		RULE_indentedCode1 = 14, RULE_list = 15, RULE_list1 = 16, RULE_list2 = 17, 
-		RULE_list3 = 18, RULE_iList3 = 19, RULE_iList2 = 20, RULE_iList1 = 21, 
-		RULE_iList0 = 22, RULE_iListItem3 = 23, RULE_iListItem2 = 24, RULE_iListItem1 = 25, 
-		RULE_iListItem0 = 26, RULE_iListBegin = 27, RULE_eList3 = 28, RULE_eList2 = 29, 
-		RULE_eList1 = 30, RULE_eList0 = 31, RULE_eListItem3 = 32, RULE_eListItem2 = 33, 
-		RULE_eListItem1 = 34, RULE_eListItem0 = 35, RULE_eListBegin = 36, RULE_blockQuote = 37, 
-		RULE_blockQuoteLine = 38, RULE_emptyBlockQuoteLine = 39, RULE_blockQuoteStart = 40, 
-		RULE_table = 41, RULE_headerRow = 42, RULE_contentRow = 43, RULE_cellContent = 44, 
-		RULE_separatorRow = 45, RULE_separatorContent = 46, RULE_imageLine = 47, 
-		RULE_textLine = 48, RULE_requiredText = 49, RULE_optionalText = 50, RULE_displayText = 51, 
-		RULE_linkText = 52, RULE_urlText = 53, RULE_headingText = 54, RULE_link = 55, 
-		RULE_urlLink = 56, RULE_textLink = 57;
+		RULE_document = 0, RULE_heading = 1, RULE_headingStart = 2, RULE_setextEnd = 3, 
+		RULE_horizontalLine = 4, RULE_hLineDBegin = 5, RULE_hLineUBegin = 6, RULE_hLineSBegin = 7, 
+		RULE_indent3 = 8, RULE_indent2 = 9, RULE_indent1 = 10, RULE_fencedCode = 11, 
+		RULE_indentedCodeBlock = 12, RULE_indentedCode1 = 13, RULE_list = 14, 
+		RULE_list1 = 15, RULE_list2 = 16, RULE_list3 = 17, RULE_iList3 = 18, RULE_iList2 = 19, 
+		RULE_iList1 = 20, RULE_iList0 = 21, RULE_iListItem3 = 22, RULE_iListItem2 = 23, 
+		RULE_iListItem1 = 24, RULE_iListItem0 = 25, RULE_iListBegin = 26, RULE_eList3 = 27, 
+		RULE_eList2 = 28, RULE_eList1 = 29, RULE_eList0 = 30, RULE_eListItem3 = 31, 
+		RULE_eListItem2 = 32, RULE_eListItem1 = 33, RULE_eListItem0 = 34, RULE_eListBegin = 35, 
+		RULE_blockQuote = 36, RULE_blockQuoteLine = 37, RULE_emptyBlockQuoteLine = 38, 
+		RULE_blockQuoteStart = 39, RULE_table = 40, RULE_headerRow = 41, RULE_contentRow = 42, 
+		RULE_cellContent = 43, RULE_separatorRow = 44, RULE_separatorContent = 45, 
+		RULE_imageLine = 46, RULE_textLine = 47, RULE_requiredText = 48, RULE_optionalText = 49, 
+		RULE_displayText = 50, RULE_linkText = 51, RULE_urlText = 52, RULE_headingText = 53, 
+		RULE_fencedText = 54, RULE_link = 55, RULE_urlLink = 56, RULE_textLink = 57;
 	public static readonly string[] ruleNames = {
-		"document", "heading", "emptyHeading", "atxHeading", "headingStart", "horizontalLine", 
+		"document", "heading", "headingStart", "setextEnd", "horizontalLine", 
 		"hLineDBegin", "hLineUBegin", "hLineSBegin", "indent3", "indent2", "indent1", 
 		"fencedCode", "indentedCodeBlock", "indentedCode1", "list", "list1", "list2", 
 		"list3", "iList3", "iList2", "iList1", "iList0", "iListItem3", "iListItem2", 
@@ -75,7 +74,8 @@ public partial class MarkdownParser : Parser {
 		"blockQuote", "blockQuoteLine", "emptyBlockQuoteLine", "blockQuoteStart", 
 		"table", "headerRow", "contentRow", "cellContent", "separatorRow", "separatorContent", 
 		"imageLine", "textLine", "requiredText", "optionalText", "displayText", 
-		"linkText", "urlText", "headingText", "link", "urlLink", "textLink"
+		"linkText", "urlText", "headingText", "fencedText", "link", "urlLink", 
+		"textLink"
 	};
 
 	private static readonly string[] _LiteralNames = {
@@ -112,28 +112,29 @@ public partial class MarkdownParser : Parser {
 		}
 	}
 
-	public override string GrammarFileName { get { return "MarkdownParser.g4"; } }
+	public override string GrammarFileName { get { return "Markdown.g4"; } }
 
 	public override string[] RuleNames { get { return ruleNames; } }
 
 	public override int[] SerializedAtn { get { return _serializedATN; } }
 
-	static MarkdownParser() {
+	static Markdown() {
 		decisionToDFA = new DFA[_ATN.NumberOfDecisions];
 		for (int i = 0; i < _ATN.NumberOfDecisions; i++) {
 			decisionToDFA[i] = new DFA(_ATN.GetDecisionState(i), i);
 		}
 	}
 
-		public MarkdownParser(ITokenStream input) : this(input, Console.Out, Console.Error) { }
+		public Markdown(ITokenStream input) : this(input, Console.Out, Console.Error) { }
 
-		public MarkdownParser(ITokenStream input, TextWriter output, TextWriter errorOutput)
+		public Markdown(ITokenStream input, TextWriter output, TextWriter errorOutput)
 		: base(input, output, errorOutput)
 	{
 		Interpreter = new ParserATNSimulator(this, _ATN, decisionToDFA, sharedContextCache);
 	}
 
 	public partial class DocumentContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Eof() { return GetToken(Markdown.Eof, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public HeadingContext[] heading() {
 			return GetRuleContexts<HeadingContext>();
 		}
@@ -195,17 +196,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_document; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterDocument(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitDocument(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitDocument(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -287,6 +288,8 @@ public partial class MarkdownParser : Parser {
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
+			State = 130;
+			Match(Eof);
 			}
 		}
 		catch (RecognitionException re) {
@@ -301,31 +304,95 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class HeadingContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public AtxHeadingContext atxHeading() {
-			return GetRuleContext<AtxHeadingContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public EmptyHeadingContext emptyHeading() {
-			return GetRuleContext<EmptyHeadingContext>(0);
-		}
 		public HeadingContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
 		}
 		public override int RuleIndex { get { return RULE_heading; } }
+	 
+		public HeadingContext() { }
+		public virtual void CopyFrom(HeadingContext context) {
+			base.CopyFrom(context);
+		}
+	}
+	public partial class SetextHeadingContext : HeadingContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
+			return GetRuleContext<RequiredTextContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public SetextEndContext setextEnd() {
+			return GetRuleContext<SetextEndContext>(0);
+		}
+		public SetextHeadingContext(HeadingContext context) { CopyFrom(context); }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
-			if (typedListener != null) typedListener.EnterHeading(this);
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.EnterSetextHeading(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
-			if (typedListener != null) typedListener.ExitHeading(this);
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.ExitSetextHeading(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitHeading(this);
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitSetextHeading(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+	public partial class EmptyHeadingContext : HeadingContext {
+		[System.Diagnostics.DebuggerNonUserCode] public HeadingStartContext headingStart() {
+			return GetRuleContext<HeadingStartContext>(0);
+		}
+		public EmptyHeadingContext(HeadingContext context) { CopyFrom(context); }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.EnterEmptyHeading(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.ExitEmptyHeading(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitEmptyHeading(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+	public partial class AtxHeadingContext : HeadingContext {
+		[System.Diagnostics.DebuggerNonUserCode] public HeadingStartContext headingStart() {
+			return GetRuleContext<HeadingStartContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
+			return GetToken(Markdown.Space, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public HeadingTextContext headingText() {
+			return GetRuleContext<HeadingTextContext>(0);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Sharp() { return GetTokens(Markdown.Sharp); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Sharp(int i) {
+			return GetToken(Markdown.Sharp, i);
+		}
+		public AtxHeadingContext(HeadingContext context) { CopyFrom(context); }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.EnterAtxHeading(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.ExitAtxHeading(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitAtxHeading(this);
 			else return visitor.VisitChildren(this);
 		}
 	}
@@ -334,162 +401,67 @@ public partial class MarkdownParser : Parser {
 	public HeadingContext heading() {
 		HeadingContext _localctx = new HeadingContext(Context, State);
 		EnterRule(_localctx, 2, RULE_heading);
-		try {
-			State = 132;
-			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,2,Context) ) {
-			case 1:
-				EnterOuterAlt(_localctx, 1);
-				{
-				State = 130;
-				atxHeading();
-				}
-				break;
-			case 2:
-				EnterOuterAlt(_localctx, 2);
-				{
-				State = 131;
-				emptyHeading();
-				}
-				break;
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class EmptyHeadingContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public HeadingStartContext headingStart() {
-			return GetRuleContext<HeadingStartContext>(0);
-		}
-		public EmptyHeadingContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_emptyHeading; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
-			if (typedListener != null) typedListener.EnterEmptyHeading(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
-			if (typedListener != null) typedListener.ExitEmptyHeading(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitEmptyHeading(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-
-	[RuleVersion(0)]
-	public EmptyHeadingContext emptyHeading() {
-		EmptyHeadingContext _localctx = new EmptyHeadingContext(Context, State);
-		EnterRule(_localctx, 4, RULE_emptyHeading);
-		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 134;
-			headingStart();
-			}
-		}
-		catch (RecognitionException re) {
-			_localctx.exception = re;
-			ErrorHandler.ReportError(this, re);
-			ErrorHandler.Recover(this, re);
-		}
-		finally {
-			ExitRule();
-		}
-		return _localctx;
-	}
-
-	public partial class AtxHeadingContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public HeadingStartContext headingStart() {
-			return GetRuleContext<HeadingStartContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public HeadingTextContext headingText() {
-			return GetRuleContext<HeadingTextContext>(0);
-		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Sharp() { return GetTokens(MarkdownParser.Sharp); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Sharp(int i) {
-			return GetToken(MarkdownParser.Sharp, i);
-		}
-		public AtxHeadingContext(ParserRuleContext parent, int invokingState)
-			: base(parent, invokingState)
-		{
-		}
-		public override int RuleIndex { get { return RULE_atxHeading; } }
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
-			if (typedListener != null) typedListener.EnterAtxHeading(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
-			if (typedListener != null) typedListener.ExitAtxHeading(this);
-		}
-		[System.Diagnostics.DebuggerNonUserCode]
-		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
-			if (typedVisitor != null) return typedVisitor.VisitAtxHeading(this);
-			else return visitor.VisitChildren(this);
-		}
-	}
-
-	[RuleVersion(0)]
-	public AtxHeadingContext atxHeading() {
-		AtxHeadingContext _localctx = new AtxHeadingContext(Context, State);
-		EnterRule(_localctx, 6, RULE_atxHeading);
 		int _la;
 		try {
-			EnterOuterAlt(_localctx, 1);
-			{
-			State = 136;
-			headingStart();
-			State = 137;
-			Match(Space);
-			State = 138;
-			headingText();
-			State = 145;
+			State = 148;
 			ErrorHandler.Sync(this);
-			_la = TokenStream.LA(1);
-			if (_la==Space) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,4,Context) ) {
+			case 1:
+				_localctx = new AtxHeadingContext(_localctx);
+				EnterOuterAlt(_localctx, 1);
 				{
-				State = 139;
+				State = 132;
+				headingStart();
+				State = 133;
 				Match(Space);
+				State = 134;
+				headingText();
 				State = 141;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
-				do {
+				if (_la==Space) {
 					{
-					{
-					State = 140;
-					Match(Sharp);
-					}
-					}
-					State = 143;
+					State = 135;
+					Match(Space);
+					State = 137;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
-				} while ( _la==Sharp );
+					do {
+						{
+						{
+						State = 136;
+						Match(Sharp);
+						}
+						}
+						State = 139;
+						ErrorHandler.Sync(this);
+						_la = TokenStream.LA(1);
+					} while ( _la==Sharp );
+					}
 				}
-			}
 
+				}
+				break;
+			case 2:
+				_localctx = new SetextHeadingContext(_localctx);
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 143;
+				Match(Newline);
+				State = 144;
+				requiredText();
+				State = 145;
+				setextEnd();
+				}
+				break;
+			case 3:
+				_localctx = new EmptyHeadingContext(_localctx);
+				EnterOuterAlt(_localctx, 3);
+				{
+				State = 147;
+				headingStart();
+				}
+				break;
 			}
 		}
 		catch (RecognitionException re) {
@@ -504,10 +476,10 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class HeadingStartContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Sharp() { return GetTokens(MarkdownParser.Sharp); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Sharp() { return GetTokens(Markdown.Sharp); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Sharp(int i) {
-			return GetToken(MarkdownParser.Sharp, i);
+			return GetToken(Markdown.Sharp, i);
 		}
 		public HeadingStartContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -516,17 +488,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_headingStart; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterHeadingStart(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitHeadingStart(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitHeadingStart(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -535,49 +507,49 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public HeadingStartContext headingStart() {
 		HeadingStartContext _localctx = new HeadingStartContext(Context, State);
-		EnterRule(_localctx, 8, RULE_headingStart);
+		EnterRule(_localctx, 4, RULE_headingStart);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 147;
+			State = 150;
 			Match(Newline);
-			State = 148;
+			State = 151;
 			Match(Sharp);
-			State = 162;
+			State = 165;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Sharp) {
 				{
-				State = 149;
+				State = 152;
 				Match(Sharp);
-				State = 160;
+				State = 163;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if (_la==Sharp) {
 					{
-					State = 150;
+					State = 153;
 					Match(Sharp);
-					State = 158;
+					State = 161;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 					if (_la==Sharp) {
 						{
-						State = 151;
+						State = 154;
 						Match(Sharp);
-						State = 156;
+						State = 159;
 						ErrorHandler.Sync(this);
 						_la = TokenStream.LA(1);
 						if (_la==Sharp) {
 							{
-							State = 152;
+							State = 155;
 							Match(Sharp);
-							State = 154;
+							State = 157;
 							ErrorHandler.Sync(this);
 							_la = TokenStream.LA(1);
 							if (_la==Sharp) {
 								{
-								State = 153;
+								State = 156;
 								Match(Sharp);
 								}
 							}
@@ -607,32 +579,140 @@ public partial class MarkdownParser : Parser {
 		return _localctx;
 	}
 
+	public partial class SetextEndContext : ParserRuleContext {
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
+			return GetToken(Markdown.Newline, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Dash() { return GetTokens(Markdown.Dash); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dash(int i) {
+			return GetToken(Markdown.Dash, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Equal() { return GetTokens(Markdown.Equal); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Equal(int i) {
+			return GetToken(Markdown.Equal, i);
+		}
+		public SetextEndContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_setextEnd; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.EnterSetextEnd(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.ExitSetextEnd(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitSetextEnd(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public SetextEndContext setextEnd() {
+		SetextEndContext _localctx = new SetextEndContext(Context, State);
+		EnterRule(_localctx, 6, RULE_setextEnd);
+		int _la;
+		try {
+			State = 183;
+			ErrorHandler.Sync(this);
+			switch ( Interpreter.AdaptivePredict(TokenStream,12,Context) ) {
+			case 1:
+				EnterOuterAlt(_localctx, 1);
+				{
+				State = 167;
+				Match(Newline);
+				State = 168;
+				Match(Dash);
+				State = 170;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				do {
+					{
+					{
+					State = 169;
+					Match(Dash);
+					}
+					}
+					State = 172;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+				} while ( _la==Dash );
+				State = 174;
+				Match(Newline);
+				}
+				break;
+			case 2:
+				EnterOuterAlt(_localctx, 2);
+				{
+				State = 175;
+				Match(Newline);
+				State = 176;
+				Match(Equal);
+				State = 178;
+				ErrorHandler.Sync(this);
+				_la = TokenStream.LA(1);
+				do {
+					{
+					{
+					State = 177;
+					Match(Equal);
+					}
+					}
+					State = 180;
+					ErrorHandler.Sync(this);
+					_la = TokenStream.LA(1);
+				} while ( _la==Equal );
+				State = 182;
+				Match(Newline);
+				}
+				break;
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
 	public partial class HorizontalLineContext : ParserRuleContext {
 		[System.Diagnostics.DebuggerNonUserCode] public HLineDBeginContext hLineDBegin() {
 			return GetRuleContext<HLineDBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
+			return GetToken(Markdown.Space, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Dash() { return GetTokens(MarkdownParser.Dash); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Dash() { return GetTokens(Markdown.Dash); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dash(int i) {
-			return GetToken(MarkdownParser.Dash, i);
+			return GetToken(Markdown.Dash, i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public HLineUBeginContext hLineUBegin() {
 			return GetRuleContext<HLineUBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Underscore() { return GetTokens(MarkdownParser.Underscore); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Underscore() { return GetTokens(Markdown.Underscore); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Underscore(int i) {
-			return GetToken(MarkdownParser.Underscore, i);
+			return GetToken(Markdown.Underscore, i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public HLineSBeginContext hLineSBegin() {
 			return GetRuleContext<HLineSBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Star() { return GetTokens(MarkdownParser.Star); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Star() { return GetTokens(Markdown.Star); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Star(int i) {
-			return GetToken(MarkdownParser.Star, i);
+			return GetToken(Markdown.Star, i);
 		}
 		public HorizontalLineContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -641,17 +721,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_horizontalLine; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterHorizontalLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitHorizontalLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitHorizontalLine(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -660,24 +740,24 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public HorizontalLineContext horizontalLine() {
 		HorizontalLineContext _localctx = new HorizontalLineContext(Context, State);
-		EnterRule(_localctx, 10, RULE_horizontalLine);
+		EnterRule(_localctx, 8, RULE_horizontalLine);
 		int _la;
 		try {
-			State = 191;
+			State = 212;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,13,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,16,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 164;
+				State = 185;
 				hLineDBegin();
-				State = 168;
+				State = 189;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				while (_la==Space || _la==Dash) {
 					{
 					{
-					State = 165;
+					State = 186;
 					_la = TokenStream.LA(1);
 					if ( !(_la==Space || _la==Dash) ) {
 					ErrorHandler.RecoverInline(this);
@@ -688,26 +768,26 @@ public partial class MarkdownParser : Parser {
 					}
 					}
 					}
-					State = 170;
+					State = 191;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
-				State = 171;
+				State = 192;
 				Match(Newline);
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 173;
+				State = 194;
 				hLineUBegin();
-				State = 177;
+				State = 198;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				while (_la==Space || _la==Underscore) {
 					{
 					{
-					State = 174;
+					State = 195;
 					_la = TokenStream.LA(1);
 					if ( !(_la==Space || _la==Underscore) ) {
 					ErrorHandler.RecoverInline(this);
@@ -718,26 +798,26 @@ public partial class MarkdownParser : Parser {
 					}
 					}
 					}
-					State = 179;
+					State = 200;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
-				State = 180;
+				State = 201;
 				Match(Newline);
 				}
 				break;
 			case 3:
 				EnterOuterAlt(_localctx, 3);
 				{
-				State = 182;
+				State = 203;
 				hLineSBegin();
-				State = 186;
+				State = 207;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				while (_la==Space || _la==Star) {
 					{
 					{
-					State = 183;
+					State = 204;
 					_la = TokenStream.LA(1);
 					if ( !(_la==Space || _la==Star) ) {
 					ErrorHandler.RecoverInline(this);
@@ -748,11 +828,11 @@ public partial class MarkdownParser : Parser {
 					}
 					}
 					}
-					State = 188;
+					State = 209;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 				}
-				State = 189;
+				State = 210;
 				Match(Newline);
 				}
 				break;
@@ -770,14 +850,14 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class HLineDBeginContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Dash() { return GetTokens(MarkdownParser.Dash); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Dash() { return GetTokens(Markdown.Dash); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dash(int i) {
-			return GetToken(MarkdownParser.Dash, i);
+			return GetToken(Markdown.Dash, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
+			return GetToken(Markdown.Space, i);
 		}
 		public HLineDBeginContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -786,17 +866,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_hLineDBegin; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterHLineDBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitHLineDBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitHLineDBegin(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -805,46 +885,46 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public HLineDBeginContext hLineDBegin() {
 		HLineDBeginContext _localctx = new HLineDBeginContext(Context, State);
-		EnterRule(_localctx, 12, RULE_hLineDBegin);
+		EnterRule(_localctx, 10, RULE_hLineDBegin);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 193;
+			State = 214;
 			Match(Newline);
-			State = 194;
+			State = 215;
 			Match(Dash);
-			State = 198;
+			State = 219;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==Space) {
 				{
 				{
-				State = 195;
+				State = 216;
 				Match(Space);
 				}
 				}
-				State = 200;
+				State = 221;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 201;
+			State = 222;
 			Match(Dash);
-			State = 205;
+			State = 226;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==Space) {
 				{
 				{
-				State = 202;
+				State = 223;
 				Match(Space);
 				}
 				}
-				State = 207;
+				State = 228;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 208;
+			State = 229;
 			Match(Dash);
 			}
 		}
@@ -860,14 +940,14 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class HLineUBeginContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Underscore() { return GetTokens(MarkdownParser.Underscore); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Underscore() { return GetTokens(Markdown.Underscore); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Underscore(int i) {
-			return GetToken(MarkdownParser.Underscore, i);
+			return GetToken(Markdown.Underscore, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
+			return GetToken(Markdown.Space, i);
 		}
 		public HLineUBeginContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -876,17 +956,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_hLineUBegin; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterHLineUBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitHLineUBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitHLineUBegin(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -895,46 +975,46 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public HLineUBeginContext hLineUBegin() {
 		HLineUBeginContext _localctx = new HLineUBeginContext(Context, State);
-		EnterRule(_localctx, 14, RULE_hLineUBegin);
+		EnterRule(_localctx, 12, RULE_hLineUBegin);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 210;
+			State = 231;
 			Match(Newline);
-			State = 211;
+			State = 232;
 			Match(Underscore);
-			State = 215;
+			State = 236;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==Space) {
 				{
 				{
-				State = 212;
+				State = 233;
 				Match(Space);
 				}
 				}
-				State = 217;
+				State = 238;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 218;
+			State = 239;
 			Match(Underscore);
-			State = 222;
+			State = 243;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==Space) {
 				{
 				{
-				State = 219;
+				State = 240;
 				Match(Space);
 				}
 				}
-				State = 224;
+				State = 245;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 225;
+			State = 246;
 			Match(Underscore);
 			}
 		}
@@ -950,14 +1030,14 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class HLineSBeginContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Star() { return GetTokens(MarkdownParser.Star); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Star() { return GetTokens(Markdown.Star); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Star(int i) {
-			return GetToken(MarkdownParser.Star, i);
+			return GetToken(Markdown.Star, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
+			return GetToken(Markdown.Space, i);
 		}
 		public HLineSBeginContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -966,17 +1046,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_hLineSBegin; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterHLineSBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitHLineSBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitHLineSBegin(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -985,46 +1065,46 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public HLineSBeginContext hLineSBegin() {
 		HLineSBeginContext _localctx = new HLineSBeginContext(Context, State);
-		EnterRule(_localctx, 16, RULE_hLineSBegin);
+		EnterRule(_localctx, 14, RULE_hLineSBegin);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 227;
+			State = 248;
 			Match(Newline);
-			State = 228;
+			State = 249;
 			Match(Star);
-			State = 232;
+			State = 253;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==Space) {
 				{
 				{
-				State = 229;
+				State = 250;
 				Match(Space);
 				}
 				}
-				State = 234;
+				State = 255;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 235;
+			State = 256;
 			Match(Star);
-			State = 239;
+			State = 260;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while (_la==Space) {
 				{
 				{
-				State = 236;
+				State = 257;
 				Match(Space);
 				}
 				}
-				State = 241;
+				State = 262;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
-			State = 242;
+			State = 263;
 			Match(Star);
 			}
 		}
@@ -1040,10 +1120,10 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class Indent3Context : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
+			return GetToken(Markdown.Space, i);
 		}
 		public Indent3Context(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1052,17 +1132,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_indent3; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIndent3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIndent3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIndent3(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1071,35 +1151,35 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public Indent3Context indent3() {
 		Indent3Context _localctx = new Indent3Context(Context, State);
-		EnterRule(_localctx, 18, RULE_indent3);
+		EnterRule(_localctx, 16, RULE_indent3);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 244;
+			State = 265;
 			Match(Newline);
-			State = 245;
+			State = 266;
 			Match(Space);
-			State = 246;
+			State = 267;
 			Match(Space);
-			State = 247;
+			State = 268;
 			Match(Space);
-			State = 248;
+			State = 269;
 			Match(Space);
-			State = 249;
+			State = 270;
 			Match(Space);
-			State = 250;
+			State = 271;
 			Match(Space);
-			State = 251;
+			State = 272;
 			Match(Space);
-			State = 252;
+			State = 273;
 			Match(Space);
-			State = 253;
+			State = 274;
 			Match(Space);
-			State = 254;
+			State = 275;
 			Match(Space);
-			State = 255;
+			State = 276;
 			Match(Space);
-			State = 256;
+			State = 277;
 			Match(Space);
 			}
 		}
@@ -1115,10 +1195,10 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class Indent2Context : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
+			return GetToken(Markdown.Space, i);
 		}
 		public Indent2Context(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1127,17 +1207,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_indent2; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIndent2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIndent2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIndent2(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1146,27 +1226,27 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public Indent2Context indent2() {
 		Indent2Context _localctx = new Indent2Context(Context, State);
-		EnterRule(_localctx, 20, RULE_indent2);
+		EnterRule(_localctx, 18, RULE_indent2);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 258;
+			State = 279;
 			Match(Newline);
-			State = 259;
+			State = 280;
 			Match(Space);
-			State = 260;
+			State = 281;
 			Match(Space);
-			State = 261;
+			State = 282;
 			Match(Space);
-			State = 262;
+			State = 283;
 			Match(Space);
-			State = 263;
+			State = 284;
 			Match(Space);
-			State = 264;
+			State = 285;
 			Match(Space);
-			State = 265;
+			State = 286;
 			Match(Space);
-			State = 266;
+			State = 287;
 			Match(Space);
 			}
 		}
@@ -1182,10 +1262,10 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class Indent1Context : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
+			return GetToken(Markdown.Space, i);
 		}
 		public Indent1Context(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1194,17 +1274,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_indent1; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIndent1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIndent1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIndent1(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1213,19 +1293,19 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public Indent1Context indent1() {
 		Indent1Context _localctx = new Indent1Context(Context, State);
-		EnterRule(_localctx, 22, RULE_indent1);
+		EnterRule(_localctx, 20, RULE_indent1);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 268;
+			State = 289;
 			Match(Newline);
-			State = 269;
+			State = 290;
 			Match(Space);
-			State = 270;
+			State = 291;
 			Match(Space);
-			State = 271;
+			State = 292;
 			Match(Space);
-			State = 272;
+			State = 293;
 			Match(Space);
 			}
 		}
@@ -1241,17 +1321,20 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class FencedCodeContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Code() { return GetTokens(MarkdownParser.Code); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Code() { return GetTokens(Markdown.Code); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Code(int i) {
-			return GetToken(MarkdownParser.Code, i);
+			return GetToken(Markdown.Code, i);
+		}
+		[System.Diagnostics.DebuggerNonUserCode] public FencedTextContext fencedText() {
+			return GetRuleContext<FencedTextContext>(0);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public OptionalTextContext optionalText() {
 			return GetRuleContext<OptionalTextContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Tilde() { return GetTokens(MarkdownParser.Tilde); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Tilde() { return GetTokens(Markdown.Tilde); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Tilde(int i) {
-			return GetToken(MarkdownParser.Tilde, i);
+			return GetToken(Markdown.Tilde, i);
 		}
 		public FencedCodeContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -1260,17 +1343,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_fencedCode; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterFencedCode(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitFencedCode(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitFencedCode(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1279,83 +1362,54 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public FencedCodeContext fencedCode() {
 		FencedCodeContext _localctx = new FencedCodeContext(Context, State);
-		EnterRule(_localctx, 24, RULE_fencedCode);
+		EnterRule(_localctx, 22, RULE_fencedCode);
 		try {
-			int _alt;
-			State = 302;
+			State = 315;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,22,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,23,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 274;
+				State = 295;
 				Match(Newline);
-				State = 275;
+				State = 296;
 				Match(Code);
-				State = 276;
+				State = 297;
 				Match(Code);
-				State = 277;
+				State = 298;
 				Match(Code);
-				State = 281;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,20,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 278;
-						MatchWildcard();
-						}
-						} 
-					}
-					State = 283;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,20,Context);
-				}
-				State = 284;
+				State = 299;
+				fencedText();
+				State = 300;
 				Match(Code);
-				State = 285;
+				State = 301;
 				Match(Code);
-				State = 286;
+				State = 302;
 				Match(Code);
-				State = 287;
+				State = 303;
 				optionalText();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 288;
+				State = 305;
 				Match(Newline);
-				State = 289;
+				State = 306;
 				Match(Tilde);
-				State = 290;
+				State = 307;
 				Match(Tilde);
-				State = 291;
+				State = 308;
 				Match(Tilde);
-				State = 295;
-				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,21,Context);
-				while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
-					if ( _alt==1+1 ) {
-						{
-						{
-						State = 292;
-						MatchWildcard();
-						}
-						} 
-					}
-					State = 297;
-					ErrorHandler.Sync(this);
-					_alt = Interpreter.AdaptivePredict(TokenStream,21,Context);
-				}
-				State = 298;
+				State = 309;
+				fencedText();
+				State = 310;
 				Match(Tilde);
-				State = 299;
+				State = 311;
 				Match(Tilde);
-				State = 300;
+				State = 312;
 				Match(Tilde);
-				State = 301;
+				State = 313;
 				optionalText();
 				}
 				break;
@@ -1373,9 +1427,9 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class IndentedCodeBlockContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public IndentedCode1Context[] indentedCode1() {
 			return GetRuleContexts<IndentedCode1Context>();
@@ -1390,17 +1444,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_indentedCodeBlock; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIndentedCodeBlock(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIndentedCodeBlock(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIndentedCodeBlock(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1409,40 +1463,40 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IndentedCodeBlockContext indentedCodeBlock() {
 		IndentedCodeBlockContext _localctx = new IndentedCodeBlockContext(Context, State);
-		EnterRule(_localctx, 26, RULE_indentedCodeBlock);
+		EnterRule(_localctx, 24, RULE_indentedCodeBlock);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 304;
+			State = 317;
 			Match(Newline);
-			State = 305;
+			State = 318;
 			indentedCode1();
-			State = 312;
+			State = 325;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,24,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,25,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 307;
+					State = 320;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,23,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,24,Context) ) {
 					case 1:
 						{
-						State = 306;
+						State = 319;
 						Match(Newline);
 						}
 						break;
 					}
-					State = 309;
+					State = 322;
 					indentedCode1();
 					}
 					} 
 				}
-				State = 314;
+				State = 327;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,24,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,25,Context);
 			}
 			}
 		}
@@ -1471,17 +1525,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_indentedCode1; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIndentedCode1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIndentedCode1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIndentedCode1(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1490,13 +1544,13 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IndentedCode1Context indentedCode1() {
 		IndentedCode1Context _localctx = new IndentedCode1Context(Context, State);
-		EnterRule(_localctx, 28, RULE_indentedCode1);
+		EnterRule(_localctx, 26, RULE_indentedCode1);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 315;
+			State = 328;
 			indent1();
-			State = 316;
+			State = 329;
 			requiredText();
 			}
 		}
@@ -1525,17 +1579,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_list; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterList(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitList(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitList(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1544,22 +1598,22 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public ListContext list() {
 		ListContext _localctx = new ListContext(Context, State);
-		EnterRule(_localctx, 30, RULE_list);
+		EnterRule(_localctx, 28, RULE_list);
 		try {
-			State = 320;
+			State = 333;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,25,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,26,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 318;
+				State = 331;
 				iList0();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 319;
+				State = 332;
 				eList0();
 				}
 				break;
@@ -1590,17 +1644,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_list1; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterList1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitList1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitList1(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1609,22 +1663,22 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public List1Context list1() {
 		List1Context _localctx = new List1Context(Context, State);
-		EnterRule(_localctx, 32, RULE_list1);
+		EnterRule(_localctx, 30, RULE_list1);
 		try {
-			State = 324;
+			State = 337;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,26,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,27,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 322;
+				State = 335;
 				iList1();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 323;
+				State = 336;
 				eList1();
 				}
 				break;
@@ -1655,17 +1709,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_list2; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterList2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitList2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitList2(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1674,22 +1728,22 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public List2Context list2() {
 		List2Context _localctx = new List2Context(Context, State);
-		EnterRule(_localctx, 34, RULE_list2);
+		EnterRule(_localctx, 32, RULE_list2);
 		try {
-			State = 328;
+			State = 341;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,27,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,28,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 326;
+				State = 339;
 				iList2();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 327;
+				State = 340;
 				eList2();
 				}
 				break;
@@ -1720,17 +1774,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_list3; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterList3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitList3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitList3(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1739,22 +1793,22 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public List3Context list3() {
 		List3Context _localctx = new List3Context(Context, State);
-		EnterRule(_localctx, 36, RULE_list3);
+		EnterRule(_localctx, 34, RULE_list3);
 		try {
-			State = 332;
+			State = 345;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,28,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,29,Context) ) {
 			case 1:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 330;
+				State = 343;
 				iList3();
 				}
 				break;
 			case 2:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 331;
+				State = 344;
 				eList3();
 				}
 				break;
@@ -1785,17 +1839,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iList3; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIList3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIList3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIList3(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1804,12 +1858,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IList3Context iList3() {
 		IList3Context _localctx = new IList3Context(Context, State);
-		EnterRule(_localctx, 38, RULE_iList3);
+		EnterRule(_localctx, 36, RULE_iList3);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 335;
+			State = 348;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
@@ -1817,7 +1871,7 @@ public partial class MarkdownParser : Parser {
 				case 1:
 					{
 					{
-					State = 334;
+					State = 347;
 					iListItem3();
 					}
 					}
@@ -1825,9 +1879,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 337;
+				State = 350;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,29,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,30,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -1856,17 +1910,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iList2; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIList2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIList2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIList2(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1875,12 +1929,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IList2Context iList2() {
 		IList2Context _localctx = new IList2Context(Context, State);
-		EnterRule(_localctx, 40, RULE_iList2);
+		EnterRule(_localctx, 38, RULE_iList2);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 340;
+			State = 353;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
@@ -1888,7 +1942,7 @@ public partial class MarkdownParser : Parser {
 				case 1:
 					{
 					{
-					State = 339;
+					State = 352;
 					iListItem2();
 					}
 					}
@@ -1896,9 +1950,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 342;
+				State = 355;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,30,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,31,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -1927,17 +1981,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iList1; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIList1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIList1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIList1(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -1946,12 +2000,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IList1Context iList1() {
 		IList1Context _localctx = new IList1Context(Context, State);
-		EnterRule(_localctx, 42, RULE_iList1);
+		EnterRule(_localctx, 40, RULE_iList1);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 345;
+			State = 358;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
@@ -1959,7 +2013,7 @@ public partial class MarkdownParser : Parser {
 				case 1:
 					{
 					{
-					State = 344;
+					State = 357;
 					iListItem1();
 					}
 					}
@@ -1967,9 +2021,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 347;
+				State = 360;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,31,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,32,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -1998,17 +2052,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iList0; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIList0(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIList0(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIList0(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2017,12 +2071,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IList0Context iList0() {
 		IList0Context _localctx = new IList0Context(Context, State);
-		EnterRule(_localctx, 44, RULE_iList0);
+		EnterRule(_localctx, 42, RULE_iList0);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 350;
+			State = 363;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
@@ -2030,7 +2084,7 @@ public partial class MarkdownParser : Parser {
 				case 1:
 					{
 					{
-					State = 349;
+					State = 362;
 					iListItem0();
 					}
 					}
@@ -2038,9 +2092,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 352;
+				State = 365;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,32,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,33,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -2062,7 +2116,7 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public IListBeginContext iListBegin() {
 			return GetRuleContext<IListBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -2073,17 +2127,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iListItem3; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIListItem3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIListItem3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIListItem3(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2092,23 +2146,23 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IListItem3Context iListItem3() {
 		IListItem3Context _localctx = new IListItem3Context(Context, State);
-		EnterRule(_localctx, 46, RULE_iListItem3);
+		EnterRule(_localctx, 44, RULE_iListItem3);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 354;
+			State = 367;
 			indent3();
-			State = 355;
+			State = 368;
 			iListBegin();
-			State = 358;
+			State = 371;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 356;
+				State = 369;
 				Match(Space);
-				State = 357;
+				State = 370;
 				requiredText();
 				}
 			}
@@ -2133,7 +2187,7 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public IListBeginContext iListBegin() {
 			return GetRuleContext<IListBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -2147,17 +2201,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iListItem2; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIListItem2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIListItem2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIListItem2(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2166,33 +2220,33 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IListItem2Context iListItem2() {
 		IListItem2Context _localctx = new IListItem2Context(Context, State);
-		EnterRule(_localctx, 48, RULE_iListItem2);
+		EnterRule(_localctx, 46, RULE_iListItem2);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 360;
+			State = 373;
 			indent2();
-			State = 361;
+			State = 374;
 			iListBegin();
-			State = 364;
+			State = 377;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 362;
+				State = 375;
 				Match(Space);
-				State = 363;
+				State = 376;
 				requiredText();
 				}
 			}
 
-			State = 367;
+			State = 380;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,35,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,36,Context) ) {
 			case 1:
 				{
-				State = 366;
+				State = 379;
 				list3();
 				}
 				break;
@@ -2217,7 +2271,7 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public IListBeginContext iListBegin() {
 			return GetRuleContext<IListBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -2231,17 +2285,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iListItem1; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIListItem1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIListItem1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIListItem1(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2250,33 +2304,33 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IListItem1Context iListItem1() {
 		IListItem1Context _localctx = new IListItem1Context(Context, State);
-		EnterRule(_localctx, 50, RULE_iListItem1);
+		EnterRule(_localctx, 48, RULE_iListItem1);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 369;
+			State = 382;
 			indent1();
-			State = 370;
+			State = 383;
 			iListBegin();
-			State = 373;
+			State = 386;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 371;
+				State = 384;
 				Match(Space);
-				State = 372;
+				State = 385;
 				requiredText();
 				}
 			}
 
-			State = 376;
+			State = 389;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,37,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,38,Context) ) {
 			case 1:
 				{
-				State = 375;
+				State = 388;
 				list2();
 				}
 				break;
@@ -2295,11 +2349,11 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class IListItem0Context : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public IListBeginContext iListBegin() {
 			return GetRuleContext<IListBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -2313,17 +2367,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iListItem0; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIListItem0(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIListItem0(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIListItem0(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2332,33 +2386,33 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IListItem0Context iListItem0() {
 		IListItem0Context _localctx = new IListItem0Context(Context, State);
-		EnterRule(_localctx, 52, RULE_iListItem0);
+		EnterRule(_localctx, 50, RULE_iListItem0);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 378;
+			State = 391;
 			Match(Newline);
-			State = 379;
+			State = 392;
 			iListBegin();
-			State = 382;
+			State = 395;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 380;
+				State = 393;
 				Match(Space);
-				State = 381;
+				State = 394;
 				requiredText();
 				}
 			}
 
-			State = 385;
+			State = 398;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,39,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,40,Context) ) {
 			case 1:
 				{
-				State = 384;
+				State = 397;
 				list1();
 				}
 				break;
@@ -2377,9 +2431,9 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class IListBeginContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dash() { return GetToken(MarkdownParser.Dash, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Plus() { return GetToken(MarkdownParser.Plus, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Star() { return GetToken(MarkdownParser.Star, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dash() { return GetToken(Markdown.Dash, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Plus() { return GetToken(Markdown.Plus, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Star() { return GetToken(Markdown.Star, 0); }
 		public IListBeginContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -2387,17 +2441,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_iListBegin; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterIListBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitIListBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitIListBegin(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2406,12 +2460,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public IListBeginContext iListBegin() {
 		IListBeginContext _localctx = new IListBeginContext(Context, State);
-		EnterRule(_localctx, 54, RULE_iListBegin);
+		EnterRule(_localctx, 52, RULE_iListBegin);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 387;
+			State = 400;
 			_la = TokenStream.LA(1);
 			if ( !(((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & 7L) != 0)) ) {
 			ErrorHandler.RecoverInline(this);
@@ -2447,17 +2501,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eList3; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEList3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEList3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEList3(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2466,12 +2520,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EList3Context eList3() {
 		EList3Context _localctx = new EList3Context(Context, State);
-		EnterRule(_localctx, 56, RULE_eList3);
+		EnterRule(_localctx, 54, RULE_eList3);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 390;
+			State = 403;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
@@ -2479,7 +2533,7 @@ public partial class MarkdownParser : Parser {
 				case 1:
 					{
 					{
-					State = 389;
+					State = 402;
 					eListItem3();
 					}
 					}
@@ -2487,9 +2541,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 392;
+				State = 405;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,40,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,41,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -2518,17 +2572,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eList2; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEList2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEList2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEList2(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2537,12 +2591,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EList2Context eList2() {
 		EList2Context _localctx = new EList2Context(Context, State);
-		EnterRule(_localctx, 58, RULE_eList2);
+		EnterRule(_localctx, 56, RULE_eList2);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 395;
+			State = 408;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
@@ -2550,7 +2604,7 @@ public partial class MarkdownParser : Parser {
 				case 1:
 					{
 					{
-					State = 394;
+					State = 407;
 					eListItem2();
 					}
 					}
@@ -2558,9 +2612,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 397;
+				State = 410;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,41,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,42,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -2589,17 +2643,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eList1; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEList1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEList1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEList1(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2608,12 +2662,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EList1Context eList1() {
 		EList1Context _localctx = new EList1Context(Context, State);
-		EnterRule(_localctx, 60, RULE_eList1);
+		EnterRule(_localctx, 58, RULE_eList1);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 400;
+			State = 413;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
@@ -2621,7 +2675,7 @@ public partial class MarkdownParser : Parser {
 				case 1:
 					{
 					{
-					State = 399;
+					State = 412;
 					eListItem1();
 					}
 					}
@@ -2629,9 +2683,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 402;
+				State = 415;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,42,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,43,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -2660,17 +2714,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eList0; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEList0(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEList0(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEList0(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2679,12 +2733,12 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EList0Context eList0() {
 		EList0Context _localctx = new EList0Context(Context, State);
-		EnterRule(_localctx, 62, RULE_eList0);
+		EnterRule(_localctx, 60, RULE_eList0);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 405;
+			State = 418;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
@@ -2692,7 +2746,7 @@ public partial class MarkdownParser : Parser {
 				case 1:
 					{
 					{
-					State = 404;
+					State = 417;
 					eListItem0();
 					}
 					}
@@ -2700,9 +2754,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 407;
+				State = 420;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,43,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,44,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -2724,7 +2778,7 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public EListBeginContext eListBegin() {
 			return GetRuleContext<EListBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -2735,17 +2789,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eListItem3; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEListItem3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEListItem3(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEListItem3(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2754,23 +2808,23 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EListItem3Context eListItem3() {
 		EListItem3Context _localctx = new EListItem3Context(Context, State);
-		EnterRule(_localctx, 64, RULE_eListItem3);
+		EnterRule(_localctx, 62, RULE_eListItem3);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 409;
+			State = 422;
 			indent3();
-			State = 410;
+			State = 423;
 			eListBegin();
-			State = 413;
+			State = 426;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 411;
+				State = 424;
 				Match(Space);
-				State = 412;
+				State = 425;
 				requiredText();
 				}
 			}
@@ -2795,7 +2849,7 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public EListBeginContext eListBegin() {
 			return GetRuleContext<EListBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -2809,17 +2863,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eListItem2; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEListItem2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEListItem2(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEListItem2(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2828,33 +2882,33 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EListItem2Context eListItem2() {
 		EListItem2Context _localctx = new EListItem2Context(Context, State);
-		EnterRule(_localctx, 66, RULE_eListItem2);
+		EnterRule(_localctx, 64, RULE_eListItem2);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 415;
+			State = 428;
 			indent2();
-			State = 416;
+			State = 429;
 			eListBegin();
-			State = 419;
+			State = 432;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 417;
+				State = 430;
 				Match(Space);
-				State = 418;
+				State = 431;
 				requiredText();
 				}
 			}
 
-			State = 422;
+			State = 435;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,46,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,47,Context) ) {
 			case 1:
 				{
-				State = 421;
+				State = 434;
 				list3();
 				}
 				break;
@@ -2879,7 +2933,7 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public EListBeginContext eListBegin() {
 			return GetRuleContext<EListBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -2893,17 +2947,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eListItem1; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEListItem1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEListItem1(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEListItem1(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2912,33 +2966,33 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EListItem1Context eListItem1() {
 		EListItem1Context _localctx = new EListItem1Context(Context, State);
-		EnterRule(_localctx, 68, RULE_eListItem1);
+		EnterRule(_localctx, 66, RULE_eListItem1);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 424;
+			State = 437;
 			indent1();
-			State = 425;
+			State = 438;
 			eListBegin();
-			State = 428;
+			State = 441;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 426;
+				State = 439;
 				Match(Space);
-				State = 427;
+				State = 440;
 				requiredText();
 				}
 			}
 
-			State = 431;
+			State = 444;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,48,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,49,Context) ) {
 			case 1:
 				{
-				State = 430;
+				State = 443;
 				list2();
 				}
 				break;
@@ -2957,11 +3011,11 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class EListItem0Context : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public EListBeginContext eListBegin() {
 			return GetRuleContext<EListBeginContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -2975,17 +3029,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eListItem0; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEListItem0(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEListItem0(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEListItem0(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -2994,33 +3048,33 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EListItem0Context eListItem0() {
 		EListItem0Context _localctx = new EListItem0Context(Context, State);
-		EnterRule(_localctx, 70, RULE_eListItem0);
+		EnterRule(_localctx, 68, RULE_eListItem0);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 433;
+			State = 446;
 			Match(Newline);
-			State = 434;
+			State = 447;
 			eListBegin();
-			State = 437;
+			State = 450;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 435;
+				State = 448;
 				Match(Space);
-				State = 436;
+				State = 449;
 				requiredText();
 				}
 			}
 
-			State = 440;
+			State = 453;
 			ErrorHandler.Sync(this);
-			switch ( Interpreter.AdaptivePredict(TokenStream,50,Context) ) {
+			switch ( Interpreter.AdaptivePredict(TokenStream,51,Context) ) {
 			case 1:
 				{
-				State = 439;
+				State = 452;
 				list1();
 				}
 				break;
@@ -3039,11 +3093,11 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class EListBeginContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dot() { return GetToken(MarkdownParser.Dot, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RPAREN() { return GetToken(MarkdownParser.RPAREN, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Digit() { return GetTokens(MarkdownParser.Digit); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dot() { return GetToken(Markdown.Dot, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RPAREN() { return GetToken(Markdown.RPAREN, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Digit() { return GetTokens(Markdown.Digit); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Digit(int i) {
-			return GetToken(MarkdownParser.Digit, i);
+			return GetToken(Markdown.Digit, i);
 		}
 		public EListBeginContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3052,17 +3106,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_eListBegin; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEListBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEListBegin(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEListBegin(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3071,26 +3125,26 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EListBeginContext eListBegin() {
 		EListBeginContext _localctx = new EListBeginContext(Context, State);
-		EnterRule(_localctx, 72, RULE_eListBegin);
+		EnterRule(_localctx, 70, RULE_eListBegin);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 443;
+			State = 456;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			do {
 				{
 				{
-				State = 442;
+				State = 455;
 				Match(Digit);
 				}
 				}
-				State = 445;
+				State = 458;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			} while ( _la==Digit );
-			State = 447;
+			State = 460;
 			_la = TokenStream.LA(1);
 			if ( !(_la==RPAREN || _la==Dot) ) {
 			ErrorHandler.RecoverInline(this);
@@ -3132,17 +3186,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_blockQuote; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterBlockQuote(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitBlockQuote(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBlockQuote(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3151,30 +3205,30 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public BlockQuoteContext blockQuote() {
 		BlockQuoteContext _localctx = new BlockQuoteContext(Context, State);
-		EnterRule(_localctx, 74, RULE_blockQuote);
+		EnterRule(_localctx, 72, RULE_blockQuote);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 451;
+			State = 464;
 			ErrorHandler.Sync(this);
 			_alt = 1;
 			do {
 				switch (_alt) {
 				case 1:
 					{
-					State = 451;
+					State = 464;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,52,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,53,Context) ) {
 					case 1:
 						{
-						State = 449;
+						State = 462;
 						blockQuoteLine();
 						}
 						break;
 					case 2:
 						{
-						State = 450;
+						State = 463;
 						emptyBlockQuoteLine();
 						}
 						break;
@@ -3184,9 +3238,9 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 453;
+				State = 466;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,53,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,54,Context);
 			} while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
 			}
 		}
@@ -3205,7 +3259,7 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public BlockQuoteStartContext blockQuoteStart() {
 			return GetRuleContext<BlockQuoteStartContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(MarkdownParser.Space, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space() { return GetToken(Markdown.Space, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public RequiredTextContext requiredText() {
 			return GetRuleContext<RequiredTextContext>(0);
 		}
@@ -3216,17 +3270,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_blockQuoteLine; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterBlockQuoteLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitBlockQuoteLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBlockQuoteLine(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3235,15 +3289,15 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public BlockQuoteLineContext blockQuoteLine() {
 		BlockQuoteLineContext _localctx = new BlockQuoteLineContext(Context, State);
-		EnterRule(_localctx, 76, RULE_blockQuoteLine);
+		EnterRule(_localctx, 74, RULE_blockQuoteLine);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 455;
+			State = 468;
 			blockQuoteStart();
-			State = 456;
+			State = 469;
 			Match(Space);
-			State = 457;
+			State = 470;
 			requiredText();
 			}
 		}
@@ -3269,17 +3323,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_emptyBlockQuoteLine; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterEmptyBlockQuoteLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitEmptyBlockQuoteLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitEmptyBlockQuoteLine(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3288,11 +3342,11 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public EmptyBlockQuoteLineContext emptyBlockQuoteLine() {
 		EmptyBlockQuoteLineContext _localctx = new EmptyBlockQuoteLineContext(Context, State);
-		EnterRule(_localctx, 78, RULE_emptyBlockQuoteLine);
+		EnterRule(_localctx, 76, RULE_emptyBlockQuoteLine);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 459;
+			State = 472;
 			blockQuoteStart();
 			}
 		}
@@ -3308,10 +3362,10 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class BlockQuoteStartContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] GT() { return GetTokens(MarkdownParser.GT); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] GT() { return GetTokens(Markdown.GT); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GT(int i) {
-			return GetToken(MarkdownParser.GT, i);
+			return GetToken(Markdown.GT, i);
 		}
 		public BlockQuoteStartContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3320,17 +3374,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_blockQuoteStart; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterBlockQuoteStart(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitBlockQuoteStart(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitBlockQuoteStart(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3339,49 +3393,49 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public BlockQuoteStartContext blockQuoteStart() {
 		BlockQuoteStartContext _localctx = new BlockQuoteStartContext(Context, State);
-		EnterRule(_localctx, 80, RULE_blockQuoteStart);
+		EnterRule(_localctx, 78, RULE_blockQuoteStart);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 461;
+			State = 474;
 			Match(Newline);
-			State = 462;
+			State = 475;
 			Match(GT);
-			State = 476;
+			State = 489;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==GT) {
 				{
-				State = 463;
+				State = 476;
 				Match(GT);
-				State = 474;
+				State = 487;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 				if (_la==GT) {
 					{
-					State = 464;
+					State = 477;
 					Match(GT);
-					State = 472;
+					State = 485;
 					ErrorHandler.Sync(this);
 					_la = TokenStream.LA(1);
 					if (_la==GT) {
 						{
-						State = 465;
+						State = 478;
 						Match(GT);
-						State = 470;
+						State = 483;
 						ErrorHandler.Sync(this);
 						_la = TokenStream.LA(1);
 						if (_la==GT) {
 							{
-							State = 466;
+							State = 479;
 							Match(GT);
-							State = 468;
+							State = 481;
 							ErrorHandler.Sync(this);
 							_la = TokenStream.LA(1);
 							if (_la==GT) {
 								{
-								State = 467;
+								State = 480;
 								Match(GT);
 								}
 							}
@@ -3412,9 +3466,9 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class TableContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public HeaderRowContext headerRow() {
 			return GetRuleContext<HeaderRowContext>(0);
@@ -3435,17 +3489,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_table; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterTable(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitTable(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitTable(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3454,42 +3508,42 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public TableContext table() {
 		TableContext _localctx = new TableContext(Context, State);
-		EnterRule(_localctx, 82, RULE_table);
+		EnterRule(_localctx, 80, RULE_table);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 478;
+			State = 491;
 			Match(Newline);
-			State = 479;
+			State = 492;
 			headerRow();
-			State = 480;
+			State = 493;
 			Match(Newline);
-			State = 481;
+			State = 494;
 			separatorRow();
-			State = 482;
+			State = 495;
 			Match(Newline);
-			State = 483;
+			State = 496;
 			contentRow();
-			State = 488;
+			State = 501;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,59,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,60,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 484;
+					State = 497;
 					Match(Newline);
-					State = 485;
+					State = 498;
 					contentRow();
 					}
 					} 
 				}
-				State = 490;
+				State = 503;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,59,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,60,Context);
 			}
-			State = 491;
+			State = 504;
 			Match(Newline);
 			}
 		}
@@ -3505,9 +3559,9 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class HeaderRowContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Pipe() { return GetTokens(MarkdownParser.Pipe); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Pipe() { return GetTokens(Markdown.Pipe); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Pipe(int i) {
-			return GetToken(MarkdownParser.Pipe, i);
+			return GetToken(Markdown.Pipe, i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public CellContentContext[] cellContent() {
 			return GetRuleContexts<CellContentContext>();
@@ -3522,17 +3576,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_headerRow; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterHeaderRow(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitHeaderRow(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitHeaderRow(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3541,34 +3595,34 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public HeaderRowContext headerRow() {
 		HeaderRowContext _localctx = new HeaderRowContext(Context, State);
-		EnterRule(_localctx, 84, RULE_headerRow);
+		EnterRule(_localctx, 82, RULE_headerRow);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 493;
+			State = 506;
 			Match(Pipe);
-			State = 494;
+			State = 507;
 			cellContent();
-			State = 499;
+			State = 512;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,60,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,61,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 495;
+					State = 508;
 					Match(Pipe);
-					State = 496;
+					State = 509;
 					cellContent();
 					}
 					} 
 				}
-				State = 501;
+				State = 514;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,60,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,61,Context);
 			}
-			State = 502;
+			State = 515;
 			Match(Pipe);
 			}
 		}
@@ -3584,9 +3638,9 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class ContentRowContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Pipe() { return GetTokens(MarkdownParser.Pipe); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Pipe() { return GetTokens(Markdown.Pipe); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Pipe(int i) {
-			return GetToken(MarkdownParser.Pipe, i);
+			return GetToken(Markdown.Pipe, i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public CellContentContext[] cellContent() {
 			return GetRuleContexts<CellContentContext>();
@@ -3601,17 +3655,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_contentRow; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterContentRow(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitContentRow(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitContentRow(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3620,34 +3674,34 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public ContentRowContext contentRow() {
 		ContentRowContext _localctx = new ContentRowContext(Context, State);
-		EnterRule(_localctx, 86, RULE_contentRow);
+		EnterRule(_localctx, 84, RULE_contentRow);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 504;
+			State = 517;
 			Match(Pipe);
-			State = 505;
+			State = 518;
 			cellContent();
-			State = 510;
+			State = 523;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,61,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,62,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 506;
+					State = 519;
 					Match(Pipe);
-					State = 507;
+					State = 520;
 					cellContent();
 					}
 					} 
 				}
-				State = 512;
+				State = 525;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,61,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,62,Context);
 			}
-			State = 513;
+			State = 526;
 			Match(Pipe);
 			}
 		}
@@ -3663,13 +3717,13 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class CellContentContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Pipe() { return GetTokens(MarkdownParser.Pipe); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Pipe() { return GetTokens(Markdown.Pipe); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Pipe(int i) {
-			return GetToken(MarkdownParser.Pipe, i);
+			return GetToken(Markdown.Pipe, i);
 		}
 		public CellContentContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3678,17 +3732,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_cellContent; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterCellContent(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitCellContent(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitCellContent(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3697,18 +3751,18 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public CellContentContext cellContent() {
 		CellContentContext _localctx = new CellContentContext(Context, State);
-		EnterRule(_localctx, 88, RULE_cellContent);
+		EnterRule(_localctx, 86, RULE_cellContent);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 518;
+			State = 531;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -4611686018427387908L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & 63L) != 0)) {
 				{
 				{
-				State = 515;
+				State = 528;
 				_la = TokenStream.LA(1);
 				if ( _la <= 0 || (_la==Newline || _la==Pipe) ) {
 				ErrorHandler.RecoverInline(this);
@@ -3719,7 +3773,7 @@ public partial class MarkdownParser : Parser {
 				}
 				}
 				}
-				State = 520;
+				State = 533;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -3737,9 +3791,9 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class SeparatorRowContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Pipe() { return GetTokens(MarkdownParser.Pipe); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Pipe() { return GetTokens(Markdown.Pipe); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Pipe(int i) {
-			return GetToken(MarkdownParser.Pipe, i);
+			return GetToken(Markdown.Pipe, i);
 		}
 		[System.Diagnostics.DebuggerNonUserCode] public SeparatorContentContext[] separatorContent() {
 			return GetRuleContexts<SeparatorContentContext>();
@@ -3754,17 +3808,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_separatorRow; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterSeparatorRow(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitSeparatorRow(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitSeparatorRow(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3773,34 +3827,34 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public SeparatorRowContext separatorRow() {
 		SeparatorRowContext _localctx = new SeparatorRowContext(Context, State);
-		EnterRule(_localctx, 90, RULE_separatorRow);
+		EnterRule(_localctx, 88, RULE_separatorRow);
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 521;
+			State = 534;
 			Match(Pipe);
-			State = 522;
+			State = 535;
 			separatorContent();
-			State = 527;
+			State = 540;
 			ErrorHandler.Sync(this);
-			_alt = Interpreter.AdaptivePredict(TokenStream,63,Context);
+			_alt = Interpreter.AdaptivePredict(TokenStream,64,Context);
 			while ( _alt!=2 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
 				if ( _alt==1 ) {
 					{
 					{
-					State = 523;
+					State = 536;
 					Match(Pipe);
-					State = 524;
+					State = 537;
 					separatorContent();
 					}
 					} 
 				}
-				State = 529;
+				State = 542;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,63,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,64,Context);
 			}
-			State = 530;
+			State = 543;
 			Match(Pipe);
 			}
 		}
@@ -3816,17 +3870,17 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class SeparatorContentContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(MarkdownParser.Space); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Space() { return GetTokens(Markdown.Space); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Space(int i) {
-			return GetToken(MarkdownParser.Space, i);
+			return GetToken(Markdown.Space, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Colon() { return GetTokens(MarkdownParser.Colon); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Colon() { return GetTokens(Markdown.Colon); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Colon(int i) {
-			return GetToken(MarkdownParser.Colon, i);
+			return GetToken(Markdown.Colon, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Dash() { return GetTokens(MarkdownParser.Dash); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Dash() { return GetTokens(Markdown.Dash); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Dash(int i) {
-			return GetToken(MarkdownParser.Dash, i);
+			return GetToken(Markdown.Dash, i);
 		}
 		public SeparatorContentContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -3835,17 +3889,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_separatorContent; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterSeparatorContent(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitSeparatorContent(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitSeparatorContent(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3854,61 +3908,61 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public SeparatorContentContext separatorContent() {
 		SeparatorContentContext _localctx = new SeparatorContentContext(Context, State);
-		EnterRule(_localctx, 92, RULE_separatorContent);
+		EnterRule(_localctx, 90, RULE_separatorContent);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 533;
+			State = 546;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 532;
+				State = 545;
 				Match(Space);
 				}
 			}
 
-			State = 536;
+			State = 549;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Colon) {
 				{
-				State = 535;
+				State = 548;
 				Match(Colon);
 				}
 			}
 
-			State = 539;
+			State = 552;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			do {
 				{
 				{
-				State = 538;
+				State = 551;
 				Match(Dash);
 				}
 				}
-				State = 541;
+				State = 554;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			} while ( _la==Dash );
-			State = 544;
+			State = 557;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Colon) {
 				{
-				State = 543;
+				State = 556;
 				Match(Colon);
 				}
 			}
 
-			State = 547;
+			State = 560;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			if (_la==Space) {
 				{
-				State = 546;
+				State = 559;
 				Match(Space);
 				}
 			}
@@ -3927,18 +3981,18 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class ImageLineContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Exclamation() { return GetToken(MarkdownParser.Exclamation, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LBRACKET() { return GetToken(MarkdownParser.LBRACKET, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Exclamation() { return GetToken(Markdown.Exclamation, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LBRACKET() { return GetToken(Markdown.LBRACKET, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public DisplayTextContext displayText() {
 			return GetRuleContext<DisplayTextContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RBRACKET() { return GetToken(MarkdownParser.RBRACKET, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LPAREN() { return GetToken(MarkdownParser.LPAREN, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RBRACKET() { return GetToken(Markdown.RBRACKET, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LPAREN() { return GetToken(Markdown.LPAREN, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public LinkTextContext linkText() {
 			return GetRuleContext<LinkTextContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RPAREN() { return GetToken(MarkdownParser.RPAREN, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RPAREN() { return GetToken(Markdown.RPAREN, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public OptionalTextContext optionalText() {
 			return GetRuleContext<OptionalTextContext>(0);
 		}
@@ -3949,17 +4003,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_imageLine; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterImageLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitImageLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitImageLine(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -3968,27 +4022,27 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public ImageLineContext imageLine() {
 		ImageLineContext _localctx = new ImageLineContext(Context, State);
-		EnterRule(_localctx, 94, RULE_imageLine);
+		EnterRule(_localctx, 92, RULE_imageLine);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 549;
+			State = 562;
 			Match(Newline);
-			State = 550;
+			State = 563;
 			Match(Exclamation);
-			State = 551;
+			State = 564;
 			Match(LBRACKET);
-			State = 552;
+			State = 565;
 			displayText();
-			State = 553;
+			State = 566;
 			Match(RBRACKET);
-			State = 554;
+			State = 567;
 			Match(LPAREN);
-			State = 555;
+			State = 568;
 			linkText();
-			State = 556;
+			State = 569;
 			Match(RPAREN);
-			State = 557;
+			State = 570;
 			optionalText();
 			}
 		}
@@ -4004,7 +4058,7 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class TextLineContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(MarkdownParser.Newline, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline() { return GetToken(Markdown.Newline, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public OptionalTextContext optionalText() {
 			return GetRuleContext<OptionalTextContext>(0);
 		}
@@ -4015,17 +4069,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_textLine; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterTextLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitTextLine(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitTextLine(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4034,13 +4088,13 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public TextLineContext textLine() {
 		TextLineContext _localctx = new TextLineContext(Context, State);
-		EnterRule(_localctx, 96, RULE_textLine);
+		EnterRule(_localctx, 94, RULE_textLine);
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 559;
+			State = 572;
 			Match(Newline);
-			State = 560;
+			State = 573;
 			optionalText();
 			}
 		}
@@ -4062,9 +4116,9 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public LinkContext link(int i) {
 			return GetRuleContext<LinkContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
 		public RequiredTextContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -4073,17 +4127,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_requiredText; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterRequiredText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitRequiredText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitRequiredText(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4092,28 +4146,28 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public RequiredTextContext requiredText() {
 		RequiredTextContext _localctx = new RequiredTextContext(Context, State);
-		EnterRule(_localctx, 98, RULE_requiredText);
+		EnterRule(_localctx, 96, RULE_requiredText);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 564;
+			State = 577;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			do {
 				{
-				State = 564;
+				State = 577;
 				ErrorHandler.Sync(this);
-				switch ( Interpreter.AdaptivePredict(TokenStream,69,Context) ) {
+				switch ( Interpreter.AdaptivePredict(TokenStream,70,Context) ) {
 				case 1:
 					{
-					State = 562;
+					State = 575;
 					link();
 					}
 					break;
 				case 2:
 					{
-					State = 563;
+					State = 576;
 					_la = TokenStream.LA(1);
 					if ( _la <= 0 || (_la==Newline) ) {
 					ErrorHandler.RecoverInline(this);
@@ -4126,7 +4180,7 @@ public partial class MarkdownParser : Parser {
 					break;
 				}
 				}
-				State = 566;
+				State = 579;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & -4L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & 63L) != 0) );
@@ -4150,9 +4204,9 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public LinkContext link(int i) {
 			return GetRuleContext<LinkContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
 		public OptionalTextContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -4161,17 +4215,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_optionalText; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterOptionalText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitOptionalText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitOptionalText(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4180,28 +4234,28 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public OptionalTextContext optionalText() {
 		OptionalTextContext _localctx = new OptionalTextContext(Context, State);
-		EnterRule(_localctx, 100, RULE_optionalText);
+		EnterRule(_localctx, 98, RULE_optionalText);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 572;
+			State = 585;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			while ((((_la) & ~0x3f) == 0 && ((1L << _la) & -4L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & 63L) != 0)) {
 				{
-				State = 570;
+				State = 583;
 				ErrorHandler.Sync(this);
-				switch ( Interpreter.AdaptivePredict(TokenStream,71,Context) ) {
+				switch ( Interpreter.AdaptivePredict(TokenStream,72,Context) ) {
 				case 1:
 					{
-					State = 568;
+					State = 581;
 					link();
 					}
 					break;
 				case 2:
 					{
-					State = 569;
+					State = 582;
 					_la = TokenStream.LA(1);
 					if ( _la <= 0 || (_la==Newline) ) {
 					ErrorHandler.RecoverInline(this);
@@ -4214,7 +4268,7 @@ public partial class MarkdownParser : Parser {
 					break;
 				}
 				}
-				State = 574;
+				State = 587;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			}
@@ -4232,13 +4286,13 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class DisplayTextContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] RBRACKET() { return GetTokens(MarkdownParser.RBRACKET); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] RBRACKET() { return GetTokens(Markdown.RBRACKET); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RBRACKET(int i) {
-			return GetToken(MarkdownParser.RBRACKET, i);
+			return GetToken(Markdown.RBRACKET, i);
 		}
 		public DisplayTextContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -4247,17 +4301,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_displayText; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterDisplayText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitDisplayText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitDisplayText(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4266,18 +4320,18 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public DisplayTextContext displayText() {
 		DisplayTextContext _localctx = new DisplayTextContext(Context, State);
-		EnterRule(_localctx, 102, RULE_displayText);
+		EnterRule(_localctx, 100, RULE_displayText);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 576;
+			State = 589;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			do {
 				{
 				{
-				State = 575;
+				State = 588;
 				_la = TokenStream.LA(1);
 				if ( _la <= 0 || (_la==Newline || _la==RBRACKET) ) {
 				ErrorHandler.RecoverInline(this);
@@ -4288,7 +4342,7 @@ public partial class MarkdownParser : Parser {
 				}
 				}
 				}
-				State = 578;
+				State = 591;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & -137438953476L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & 63L) != 0) );
@@ -4306,13 +4360,13 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class LinkTextContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] RPAREN() { return GetTokens(MarkdownParser.RPAREN); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] RPAREN() { return GetTokens(Markdown.RPAREN); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RPAREN(int i) {
-			return GetToken(MarkdownParser.RPAREN, i);
+			return GetToken(Markdown.RPAREN, i);
 		}
 		public LinkTextContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -4321,17 +4375,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_linkText; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterLinkText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitLinkText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitLinkText(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4340,18 +4394,18 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public LinkTextContext linkText() {
 		LinkTextContext _localctx = new LinkTextContext(Context, State);
-		EnterRule(_localctx, 104, RULE_linkText);
+		EnterRule(_localctx, 102, RULE_linkText);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 581;
+			State = 594;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			do {
 				{
 				{
-				State = 580;
+				State = 593;
 				_la = TokenStream.LA(1);
 				if ( _la <= 0 || (_la==Newline || _la==RPAREN) ) {
 				ErrorHandler.RecoverInline(this);
@@ -4362,7 +4416,7 @@ public partial class MarkdownParser : Parser {
 				}
 				}
 				}
-				State = 583;
+				State = 596;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & -549755813892L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & 63L) != 0) );
@@ -4380,13 +4434,13 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class UrlTextContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] GT() { return GetTokens(MarkdownParser.GT); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] GT() { return GetTokens(Markdown.GT); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GT(int i) {
-			return GetToken(MarkdownParser.GT, i);
+			return GetToken(Markdown.GT, i);
 		}
 		public UrlTextContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -4395,17 +4449,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_urlText; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterUrlText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitUrlText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitUrlText(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4414,18 +4468,18 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public UrlTextContext urlText() {
 		UrlTextContext _localctx = new UrlTextContext(Context, State);
-		EnterRule(_localctx, 106, RULE_urlText);
+		EnterRule(_localctx, 104, RULE_urlText);
 		int _la;
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 586;
+			State = 599;
 			ErrorHandler.Sync(this);
 			_la = TokenStream.LA(1);
 			do {
 				{
 				{
-				State = 585;
+				State = 598;
 				_la = TokenStream.LA(1);
 				if ( _la <= 0 || (_la==Newline || _la==GT) ) {
 				ErrorHandler.RecoverInline(this);
@@ -4436,7 +4490,7 @@ public partial class MarkdownParser : Parser {
 				}
 				}
 				}
-				State = 588;
+				State = 601;
 				ErrorHandler.Sync(this);
 				_la = TokenStream.LA(1);
 			} while ( (((_la) & ~0x3f) == 0 && ((1L << _la) & -8796093022212L) != 0) || ((((_la - 64)) & ~0x3f) == 0 && ((1L << (_la - 64)) & 63L) != 0) );
@@ -4460,9 +4514,9 @@ public partial class MarkdownParser : Parser {
 		[System.Diagnostics.DebuggerNonUserCode] public LinkContext link(int i) {
 			return GetRuleContext<LinkContext>(i);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(MarkdownParser.Newline); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode[] Newline() { return GetTokens(Markdown.Newline); }
 		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode Newline(int i) {
-			return GetToken(MarkdownParser.Newline, i);
+			return GetToken(Markdown.Newline, i);
 		}
 		public HeadingTextContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
@@ -4471,17 +4525,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_headingText; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterHeadingText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitHeadingText(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitHeadingText(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4490,31 +4544,31 @@ public partial class MarkdownParser : Parser {
 	[RuleVersion(0)]
 	public HeadingTextContext headingText() {
 		HeadingTextContext _localctx = new HeadingTextContext(Context, State);
-		EnterRule(_localctx, 108, RULE_headingText);
+		EnterRule(_localctx, 106, RULE_headingText);
 		int _la;
 		try {
 			int _alt;
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 592;
+			State = 605;
 			ErrorHandler.Sync(this);
 			_alt = 1+1;
 			do {
 				switch (_alt) {
 				case 1+1:
 					{
-					State = 592;
+					State = 605;
 					ErrorHandler.Sync(this);
-					switch ( Interpreter.AdaptivePredict(TokenStream,76,Context) ) {
+					switch ( Interpreter.AdaptivePredict(TokenStream,77,Context) ) {
 					case 1:
 						{
-						State = 590;
+						State = 603;
 						link();
 						}
 						break;
 					case 2:
 						{
-						State = 591;
+						State = 604;
 						_la = TokenStream.LA(1);
 						if ( _la <= 0 || (_la==Newline) ) {
 						ErrorHandler.RecoverInline(this);
@@ -4531,10 +4585,71 @@ public partial class MarkdownParser : Parser {
 				default:
 					throw new NoViableAltException(this);
 				}
-				State = 594;
+				State = 607;
 				ErrorHandler.Sync(this);
-				_alt = Interpreter.AdaptivePredict(TokenStream,77,Context);
+				_alt = Interpreter.AdaptivePredict(TokenStream,78,Context);
 			} while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER );
+			}
+		}
+		catch (RecognitionException re) {
+			_localctx.exception = re;
+			ErrorHandler.ReportError(this, re);
+			ErrorHandler.Recover(this, re);
+		}
+		finally {
+			ExitRule();
+		}
+		return _localctx;
+	}
+
+	public partial class FencedTextContext : ParserRuleContext {
+		public FencedTextContext(ParserRuleContext parent, int invokingState)
+			: base(parent, invokingState)
+		{
+		}
+		public override int RuleIndex { get { return RULE_fencedText; } }
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void EnterRule(IParseTreeListener listener) {
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.EnterFencedText(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override void ExitRule(IParseTreeListener listener) {
+			IMarkdownListener typedListener = listener as IMarkdownListener;
+			if (typedListener != null) typedListener.ExitFencedText(this);
+		}
+		[System.Diagnostics.DebuggerNonUserCode]
+		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
+			if (typedVisitor != null) return typedVisitor.VisitFencedText(this);
+			else return visitor.VisitChildren(this);
+		}
+	}
+
+	[RuleVersion(0)]
+	public FencedTextContext fencedText() {
+		FencedTextContext _localctx = new FencedTextContext(Context, State);
+		EnterRule(_localctx, 108, RULE_fencedText);
+		try {
+			int _alt;
+			EnterOuterAlt(_localctx, 1);
+			{
+			State = 612;
+			ErrorHandler.Sync(this);
+			_alt = Interpreter.AdaptivePredict(TokenStream,79,Context);
+			while ( _alt!=1 && _alt!=global::Antlr4.Runtime.Atn.ATN.INVALID_ALT_NUMBER ) {
+				if ( _alt==1+1 ) {
+					{
+					{
+					State = 609;
+					MatchWildcard();
+					}
+					} 
+				}
+				State = 614;
+				ErrorHandler.Sync(this);
+				_alt = Interpreter.AdaptivePredict(TokenStream,79,Context);
+			}
 			}
 		}
 		catch (RecognitionException re) {
@@ -4562,17 +4677,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_link; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterLink(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitLink(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitLink(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4583,20 +4698,20 @@ public partial class MarkdownParser : Parser {
 		LinkContext _localctx = new LinkContext(Context, State);
 		EnterRule(_localctx, 110, RULE_link);
 		try {
-			State = 598;
+			State = 617;
 			ErrorHandler.Sync(this);
 			switch (TokenStream.LA(1)) {
 			case LT:
 				EnterOuterAlt(_localctx, 1);
 				{
-				State = 596;
+				State = 615;
 				urlLink();
 				}
 				break;
 			case LBRACKET:
 				EnterOuterAlt(_localctx, 2);
 				{
-				State = 597;
+				State = 616;
 				textLink();
 				}
 				break;
@@ -4616,11 +4731,11 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class UrlLinkContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LT() { return GetToken(MarkdownParser.LT, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LT() { return GetToken(Markdown.LT, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public UrlTextContext urlText() {
 			return GetRuleContext<UrlTextContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GT() { return GetToken(MarkdownParser.GT, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode GT() { return GetToken(Markdown.GT, 0); }
 		public UrlLinkContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4628,17 +4743,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_urlLink; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterUrlLink(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitUrlLink(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitUrlLink(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4651,11 +4766,11 @@ public partial class MarkdownParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 600;
+			State = 619;
 			Match(LT);
-			State = 601;
+			State = 620;
 			urlText();
-			State = 602;
+			State = 621;
 			Match(GT);
 			}
 		}
@@ -4671,16 +4786,16 @@ public partial class MarkdownParser : Parser {
 	}
 
 	public partial class TextLinkContext : ParserRuleContext {
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LBRACKET() { return GetToken(MarkdownParser.LBRACKET, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LBRACKET() { return GetToken(Markdown.LBRACKET, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public DisplayTextContext displayText() {
 			return GetRuleContext<DisplayTextContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RBRACKET() { return GetToken(MarkdownParser.RBRACKET, 0); }
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LPAREN() { return GetToken(MarkdownParser.LPAREN, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RBRACKET() { return GetToken(Markdown.RBRACKET, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode LPAREN() { return GetToken(Markdown.LPAREN, 0); }
 		[System.Diagnostics.DebuggerNonUserCode] public LinkTextContext linkText() {
 			return GetRuleContext<LinkTextContext>(0);
 		}
-		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RPAREN() { return GetToken(MarkdownParser.RPAREN, 0); }
+		[System.Diagnostics.DebuggerNonUserCode] public ITerminalNode RPAREN() { return GetToken(Markdown.RPAREN, 0); }
 		public TextLinkContext(ParserRuleContext parent, int invokingState)
 			: base(parent, invokingState)
 		{
@@ -4688,17 +4803,17 @@ public partial class MarkdownParser : Parser {
 		public override int RuleIndex { get { return RULE_textLink; } }
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void EnterRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.EnterTextLink(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override void ExitRule(IParseTreeListener listener) {
-			IMarkdownParserListener typedListener = listener as IMarkdownParserListener;
+			IMarkdownListener typedListener = listener as IMarkdownListener;
 			if (typedListener != null) typedListener.ExitTextLink(this);
 		}
 		[System.Diagnostics.DebuggerNonUserCode]
 		public override TResult Accept<TResult>(IParseTreeVisitor<TResult> visitor) {
-			IMarkdownParserVisitor<TResult> typedVisitor = visitor as IMarkdownParserVisitor<TResult>;
+			IMarkdownVisitor<TResult> typedVisitor = visitor as IMarkdownVisitor<TResult>;
 			if (typedVisitor != null) return typedVisitor.VisitTextLink(this);
 			else return visitor.VisitChildren(this);
 		}
@@ -4711,17 +4826,17 @@ public partial class MarkdownParser : Parser {
 		try {
 			EnterOuterAlt(_localctx, 1);
 			{
-			State = 604;
+			State = 623;
 			Match(LBRACKET);
-			State = 605;
+			State = 624;
 			displayText();
-			State = 606;
+			State = 625;
 			Match(RBRACKET);
-			State = 607;
+			State = 626;
 			Match(LPAREN);
-			State = 608;
+			State = 627;
 			linkText();
-			State = 609;
+			State = 628;
 			Match(RPAREN);
 			}
 		}
@@ -4737,7 +4852,7 @@ public partial class MarkdownParser : Parser {
 	}
 
 	private static int[] _serializedATN = {
-		4,1,69,612,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
+		4,1,69,631,2,0,7,0,2,1,7,1,2,2,7,2,2,3,7,3,2,4,7,4,2,5,7,5,2,6,7,6,2,7,
 		7,7,2,8,7,8,2,9,7,9,2,10,7,10,2,11,7,11,2,12,7,12,2,13,7,13,2,14,7,14,
 		2,15,7,15,2,16,7,16,2,17,7,17,2,18,7,18,2,19,7,19,2,20,7,20,2,21,7,21,
 		2,22,7,22,2,23,7,23,2,24,7,24,2,25,7,25,2,26,7,26,2,27,7,27,2,28,7,28,
@@ -4746,201 +4861,208 @@ public partial class MarkdownParser : Parser {
 		2,43,7,43,2,44,7,44,2,45,7,45,2,46,7,46,2,47,7,47,2,48,7,48,2,49,7,49,
 		2,50,7,50,2,51,7,51,2,52,7,52,2,53,7,53,2,54,7,54,2,55,7,55,2,56,7,56,
 		2,57,7,57,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,1,0,5,0,126,8,0,10,0,12,0,129,
-		9,0,1,1,1,1,3,1,133,8,1,1,2,1,2,1,3,1,3,1,3,1,3,1,3,4,3,142,8,3,11,3,12,
-		3,143,3,3,146,8,3,1,4,1,4,1,4,1,4,1,4,1,4,1,4,3,4,155,8,4,3,4,157,8,4,
-		3,4,159,8,4,3,4,161,8,4,3,4,163,8,4,1,5,1,5,5,5,167,8,5,10,5,12,5,170,
-		9,5,1,5,1,5,1,5,1,5,5,5,176,8,5,10,5,12,5,179,9,5,1,5,1,5,1,5,1,5,5,5,
-		185,8,5,10,5,12,5,188,9,5,1,5,1,5,3,5,192,8,5,1,6,1,6,1,6,5,6,197,8,6,
-		10,6,12,6,200,9,6,1,6,1,6,5,6,204,8,6,10,6,12,6,207,9,6,1,6,1,6,1,7,1,
-		7,1,7,5,7,214,8,7,10,7,12,7,217,9,7,1,7,1,7,5,7,221,8,7,10,7,12,7,224,
-		9,7,1,7,1,7,1,8,1,8,1,8,5,8,231,8,8,10,8,12,8,234,9,8,1,8,1,8,5,8,238,
-		8,8,10,8,12,8,241,9,8,1,8,1,8,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,1,9,
-		1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,10,1,11,
-		1,11,1,11,1,11,1,11,1,11,1,12,1,12,1,12,1,12,1,12,5,12,280,8,12,10,12,
-		12,12,283,9,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,1,12,5,12,294,8,
-		12,10,12,12,12,297,9,12,1,12,1,12,1,12,1,12,3,12,303,8,12,1,13,1,13,1,
-		13,3,13,308,8,13,1,13,5,13,311,8,13,10,13,12,13,314,9,13,1,14,1,14,1,14,
-		1,15,1,15,3,15,321,8,15,1,16,1,16,3,16,325,8,16,1,17,1,17,3,17,329,8,17,
-		1,18,1,18,3,18,333,8,18,1,19,4,19,336,8,19,11,19,12,19,337,1,20,4,20,341,
-		8,20,11,20,12,20,342,1,21,4,21,346,8,21,11,21,12,21,347,1,22,4,22,351,
-		8,22,11,22,12,22,352,1,23,1,23,1,23,1,23,3,23,359,8,23,1,24,1,24,1,24,
-		1,24,3,24,365,8,24,1,24,3,24,368,8,24,1,25,1,25,1,25,1,25,3,25,374,8,25,
-		1,25,3,25,377,8,25,1,26,1,26,1,26,1,26,3,26,383,8,26,1,26,3,26,386,8,26,
-		1,27,1,27,1,28,4,28,391,8,28,11,28,12,28,392,1,29,4,29,396,8,29,11,29,
-		12,29,397,1,30,4,30,401,8,30,11,30,12,30,402,1,31,4,31,406,8,31,11,31,
-		12,31,407,1,32,1,32,1,32,1,32,3,32,414,8,32,1,33,1,33,1,33,1,33,3,33,420,
-		8,33,1,33,3,33,423,8,33,1,34,1,34,1,34,1,34,3,34,429,8,34,1,34,3,34,432,
-		8,34,1,35,1,35,1,35,1,35,3,35,438,8,35,1,35,3,35,441,8,35,1,36,4,36,444,
-		8,36,11,36,12,36,445,1,36,1,36,1,37,1,37,4,37,452,8,37,11,37,12,37,453,
-		1,38,1,38,1,38,1,38,1,39,1,39,1,40,1,40,1,40,1,40,1,40,1,40,1,40,3,40,
-		469,8,40,3,40,471,8,40,3,40,473,8,40,3,40,475,8,40,3,40,477,8,40,1,41,
-		1,41,1,41,1,41,1,41,1,41,1,41,1,41,5,41,487,8,41,10,41,12,41,490,9,41,
-		1,41,1,41,1,42,1,42,1,42,1,42,5,42,498,8,42,10,42,12,42,501,9,42,1,42,
-		1,42,1,43,1,43,1,43,1,43,5,43,509,8,43,10,43,12,43,512,9,43,1,43,1,43,
-		1,44,5,44,517,8,44,10,44,12,44,520,9,44,1,45,1,45,1,45,1,45,5,45,526,8,
-		45,10,45,12,45,529,9,45,1,45,1,45,1,46,3,46,534,8,46,1,46,3,46,537,8,46,
-		1,46,4,46,540,8,46,11,46,12,46,541,1,46,3,46,545,8,46,1,46,3,46,548,8,
-		46,1,47,1,47,1,47,1,47,1,47,1,47,1,47,1,47,1,47,1,47,1,48,1,48,1,48,1,
-		49,1,49,4,49,565,8,49,11,49,12,49,566,1,50,1,50,5,50,571,8,50,10,50,12,
-		50,574,9,50,1,51,4,51,577,8,51,11,51,12,51,578,1,52,4,52,582,8,52,11,52,
-		12,52,583,1,53,4,53,587,8,53,11,53,12,53,588,1,54,1,54,4,54,593,8,54,11,
-		54,12,54,594,1,55,1,55,3,55,599,8,55,1,56,1,56,1,56,1,56,1,57,1,57,1,57,
-		1,57,1,57,1,57,1,57,1,57,3,281,295,594,0,58,0,2,4,6,8,10,12,14,16,18,20,
-		22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,60,62,64,66,68,
-		70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,106,108,110,112,
-		114,0,10,2,0,2,2,64,64,2,0,2,2,61,61,2,0,2,2,65,65,1,0,64,66,2,0,39,39,
-		44,44,2,0,1,1,62,62,1,0,1,1,2,0,1,1,37,37,2,0,1,1,39,39,2,0,1,1,43,43,
-		640,0,127,1,0,0,0,2,132,1,0,0,0,4,134,1,0,0,0,6,136,1,0,0,0,8,147,1,0,
-		0,0,10,191,1,0,0,0,12,193,1,0,0,0,14,210,1,0,0,0,16,227,1,0,0,0,18,244,
-		1,0,0,0,20,258,1,0,0,0,22,268,1,0,0,0,24,302,1,0,0,0,26,304,1,0,0,0,28,
-		315,1,0,0,0,30,320,1,0,0,0,32,324,1,0,0,0,34,328,1,0,0,0,36,332,1,0,0,
-		0,38,335,1,0,0,0,40,340,1,0,0,0,42,345,1,0,0,0,44,350,1,0,0,0,46,354,1,
-		0,0,0,48,360,1,0,0,0,50,369,1,0,0,0,52,378,1,0,0,0,54,387,1,0,0,0,56,390,
-		1,0,0,0,58,395,1,0,0,0,60,400,1,0,0,0,62,405,1,0,0,0,64,409,1,0,0,0,66,
-		415,1,0,0,0,68,424,1,0,0,0,70,433,1,0,0,0,72,443,1,0,0,0,74,451,1,0,0,
-		0,76,455,1,0,0,0,78,459,1,0,0,0,80,461,1,0,0,0,82,478,1,0,0,0,84,493,1,
-		0,0,0,86,504,1,0,0,0,88,518,1,0,0,0,90,521,1,0,0,0,92,533,1,0,0,0,94,549,
-		1,0,0,0,96,559,1,0,0,0,98,564,1,0,0,0,100,572,1,0,0,0,102,576,1,0,0,0,
-		104,581,1,0,0,0,106,586,1,0,0,0,108,592,1,0,0,0,110,598,1,0,0,0,112,600,
-		1,0,0,0,114,604,1,0,0,0,116,126,3,2,1,0,117,126,3,10,5,0,118,126,3,24,
-		12,0,119,126,3,26,13,0,120,126,3,30,15,0,121,126,3,74,37,0,122,126,3,82,
-		41,0,123,126,3,94,47,0,124,126,3,96,48,0,125,116,1,0,0,0,125,117,1,0,0,
-		0,125,118,1,0,0,0,125,119,1,0,0,0,125,120,1,0,0,0,125,121,1,0,0,0,125,
-		122,1,0,0,0,125,123,1,0,0,0,125,124,1,0,0,0,126,129,1,0,0,0,127,125,1,
-		0,0,0,127,128,1,0,0,0,128,1,1,0,0,0,129,127,1,0,0,0,130,133,3,6,3,0,131,
-		133,3,4,2,0,132,130,1,0,0,0,132,131,1,0,0,0,133,3,1,0,0,0,134,135,3,8,
-		4,0,135,5,1,0,0,0,136,137,3,8,4,0,137,138,5,2,0,0,138,145,3,108,54,0,139,
-		141,5,2,0,0,140,142,5,52,0,0,141,140,1,0,0,0,142,143,1,0,0,0,143,141,1,
-		0,0,0,143,144,1,0,0,0,144,146,1,0,0,0,145,139,1,0,0,0,145,146,1,0,0,0,
-		146,7,1,0,0,0,147,148,5,1,0,0,148,162,5,52,0,0,149,160,5,52,0,0,150,158,
-		5,52,0,0,151,156,5,52,0,0,152,154,5,52,0,0,153,155,5,52,0,0,154,153,1,
-		0,0,0,154,155,1,0,0,0,155,157,1,0,0,0,156,152,1,0,0,0,156,157,1,0,0,0,
-		157,159,1,0,0,0,158,151,1,0,0,0,158,159,1,0,0,0,159,161,1,0,0,0,160,150,
-		1,0,0,0,160,161,1,0,0,0,161,163,1,0,0,0,162,149,1,0,0,0,162,163,1,0,0,
-		0,163,9,1,0,0,0,164,168,3,12,6,0,165,167,7,0,0,0,166,165,1,0,0,0,167,170,
-		1,0,0,0,168,166,1,0,0,0,168,169,1,0,0,0,169,171,1,0,0,0,170,168,1,0,0,
-		0,171,172,5,1,0,0,172,192,1,0,0,0,173,177,3,14,7,0,174,176,7,1,0,0,175,
-		174,1,0,0,0,176,179,1,0,0,0,177,175,1,0,0,0,177,178,1,0,0,0,178,180,1,
-		0,0,0,179,177,1,0,0,0,180,181,5,1,0,0,181,192,1,0,0,0,182,186,3,16,8,0,
-		183,185,7,2,0,0,184,183,1,0,0,0,185,188,1,0,0,0,186,184,1,0,0,0,186,187,
-		1,0,0,0,187,189,1,0,0,0,188,186,1,0,0,0,189,190,5,1,0,0,190,192,1,0,0,
-		0,191,164,1,0,0,0,191,173,1,0,0,0,191,182,1,0,0,0,192,11,1,0,0,0,193,194,
-		5,1,0,0,194,198,5,64,0,0,195,197,5,2,0,0,196,195,1,0,0,0,197,200,1,0,0,
-		0,198,196,1,0,0,0,198,199,1,0,0,0,199,201,1,0,0,0,200,198,1,0,0,0,201,
-		205,5,64,0,0,202,204,5,2,0,0,203,202,1,0,0,0,204,207,1,0,0,0,205,203,1,
-		0,0,0,205,206,1,0,0,0,206,208,1,0,0,0,207,205,1,0,0,0,208,209,5,64,0,0,
-		209,13,1,0,0,0,210,211,5,1,0,0,211,215,5,61,0,0,212,214,5,2,0,0,213,212,
-		1,0,0,0,214,217,1,0,0,0,215,213,1,0,0,0,215,216,1,0,0,0,216,218,1,0,0,
-		0,217,215,1,0,0,0,218,222,5,61,0,0,219,221,5,2,0,0,220,219,1,0,0,0,221,
-		224,1,0,0,0,222,220,1,0,0,0,222,223,1,0,0,0,223,225,1,0,0,0,224,222,1,
-		0,0,0,225,226,5,61,0,0,226,15,1,0,0,0,227,228,5,1,0,0,228,232,5,65,0,0,
-		229,231,5,2,0,0,230,229,1,0,0,0,231,234,1,0,0,0,232,230,1,0,0,0,232,233,
-		1,0,0,0,233,235,1,0,0,0,234,232,1,0,0,0,235,239,5,65,0,0,236,238,5,2,0,
-		0,237,236,1,0,0,0,238,241,1,0,0,0,239,237,1,0,0,0,239,240,1,0,0,0,240,
-		242,1,0,0,0,241,239,1,0,0,0,242,243,5,65,0,0,243,17,1,0,0,0,244,245,5,
-		1,0,0,245,246,5,2,0,0,246,247,5,2,0,0,247,248,5,2,0,0,248,249,5,2,0,0,
-		249,250,5,2,0,0,250,251,5,2,0,0,251,252,5,2,0,0,252,253,5,2,0,0,253,254,
-		5,2,0,0,254,255,5,2,0,0,255,256,5,2,0,0,256,257,5,2,0,0,257,19,1,0,0,0,
-		258,259,5,1,0,0,259,260,5,2,0,0,260,261,5,2,0,0,261,262,5,2,0,0,262,263,
-		5,2,0,0,263,264,5,2,0,0,264,265,5,2,0,0,265,266,5,2,0,0,266,267,5,2,0,
-		0,267,21,1,0,0,0,268,269,5,1,0,0,269,270,5,2,0,0,270,271,5,2,0,0,271,272,
-		5,2,0,0,272,273,5,2,0,0,273,23,1,0,0,0,274,275,5,1,0,0,275,276,5,67,0,
-		0,276,277,5,67,0,0,277,281,5,67,0,0,278,280,9,0,0,0,279,278,1,0,0,0,280,
-		283,1,0,0,0,281,282,1,0,0,0,281,279,1,0,0,0,282,284,1,0,0,0,283,281,1,
-		0,0,0,284,285,5,67,0,0,285,286,5,67,0,0,286,287,5,67,0,0,287,303,3,100,
-		50,0,288,289,5,1,0,0,289,290,5,63,0,0,290,291,5,63,0,0,291,295,5,63,0,
-		0,292,294,9,0,0,0,293,292,1,0,0,0,294,297,1,0,0,0,295,296,1,0,0,0,295,
-		293,1,0,0,0,296,298,1,0,0,0,297,295,1,0,0,0,298,299,5,63,0,0,299,300,5,
-		63,0,0,300,301,5,63,0,0,301,303,3,100,50,0,302,274,1,0,0,0,302,288,1,0,
-		0,0,303,25,1,0,0,0,304,305,5,1,0,0,305,312,3,28,14,0,306,308,5,1,0,0,307,
-		306,1,0,0,0,307,308,1,0,0,0,308,309,1,0,0,0,309,311,3,28,14,0,310,307,
-		1,0,0,0,311,314,1,0,0,0,312,310,1,0,0,0,312,313,1,0,0,0,313,27,1,0,0,0,
-		314,312,1,0,0,0,315,316,3,22,11,0,316,317,3,98,49,0,317,29,1,0,0,0,318,
-		321,3,44,22,0,319,321,3,62,31,0,320,318,1,0,0,0,320,319,1,0,0,0,321,31,
-		1,0,0,0,322,325,3,42,21,0,323,325,3,60,30,0,324,322,1,0,0,0,324,323,1,
-		0,0,0,325,33,1,0,0,0,326,329,3,40,20,0,327,329,3,58,29,0,328,326,1,0,0,
-		0,328,327,1,0,0,0,329,35,1,0,0,0,330,333,3,38,19,0,331,333,3,56,28,0,332,
-		330,1,0,0,0,332,331,1,0,0,0,333,37,1,0,0,0,334,336,3,46,23,0,335,334,1,
-		0,0,0,336,337,1,0,0,0,337,335,1,0,0,0,337,338,1,0,0,0,338,39,1,0,0,0,339,
-		341,3,48,24,0,340,339,1,0,0,0,341,342,1,0,0,0,342,340,1,0,0,0,342,343,
-		1,0,0,0,343,41,1,0,0,0,344,346,3,50,25,0,345,344,1,0,0,0,346,347,1,0,0,
-		0,347,345,1,0,0,0,347,348,1,0,0,0,348,43,1,0,0,0,349,351,3,52,26,0,350,
-		349,1,0,0,0,351,352,1,0,0,0,352,350,1,0,0,0,352,353,1,0,0,0,353,45,1,0,
-		0,0,354,355,3,18,9,0,355,358,3,54,27,0,356,357,5,2,0,0,357,359,3,98,49,
-		0,358,356,1,0,0,0,358,359,1,0,0,0,359,47,1,0,0,0,360,361,3,20,10,0,361,
-		364,3,54,27,0,362,363,5,2,0,0,363,365,3,98,49,0,364,362,1,0,0,0,364,365,
-		1,0,0,0,365,367,1,0,0,0,366,368,3,36,18,0,367,366,1,0,0,0,367,368,1,0,
-		0,0,368,49,1,0,0,0,369,370,3,22,11,0,370,373,3,54,27,0,371,372,5,2,0,0,
-		372,374,3,98,49,0,373,371,1,0,0,0,373,374,1,0,0,0,374,376,1,0,0,0,375,
-		377,3,34,17,0,376,375,1,0,0,0,376,377,1,0,0,0,377,51,1,0,0,0,378,379,5,
-		1,0,0,379,382,3,54,27,0,380,381,5,2,0,0,381,383,3,98,49,0,382,380,1,0,
-		0,0,382,383,1,0,0,0,383,385,1,0,0,0,384,386,3,32,16,0,385,384,1,0,0,0,
-		385,386,1,0,0,0,386,53,1,0,0,0,387,388,7,3,0,0,388,55,1,0,0,0,389,391,
-		3,64,32,0,390,389,1,0,0,0,391,392,1,0,0,0,392,390,1,0,0,0,392,393,1,0,
-		0,0,393,57,1,0,0,0,394,396,3,66,33,0,395,394,1,0,0,0,396,397,1,0,0,0,397,
-		395,1,0,0,0,397,398,1,0,0,0,398,59,1,0,0,0,399,401,3,68,34,0,400,399,1,
-		0,0,0,401,402,1,0,0,0,402,400,1,0,0,0,402,403,1,0,0,0,403,61,1,0,0,0,404,
-		406,3,70,35,0,405,404,1,0,0,0,406,407,1,0,0,0,407,405,1,0,0,0,407,408,
-		1,0,0,0,408,63,1,0,0,0,409,410,3,18,9,0,410,413,3,72,36,0,411,412,5,2,
-		0,0,412,414,3,98,49,0,413,411,1,0,0,0,413,414,1,0,0,0,414,65,1,0,0,0,415,
-		416,3,20,10,0,416,419,3,72,36,0,417,418,5,2,0,0,418,420,3,98,49,0,419,
-		417,1,0,0,0,419,420,1,0,0,0,420,422,1,0,0,0,421,423,3,36,18,0,422,421,
-		1,0,0,0,422,423,1,0,0,0,423,67,1,0,0,0,424,425,3,22,11,0,425,428,3,72,
-		36,0,426,427,5,2,0,0,427,429,3,98,49,0,428,426,1,0,0,0,428,429,1,0,0,0,
-		429,431,1,0,0,0,430,432,3,34,17,0,431,430,1,0,0,0,431,432,1,0,0,0,432,
-		69,1,0,0,0,433,434,5,1,0,0,434,437,3,72,36,0,435,436,5,2,0,0,436,438,3,
-		98,49,0,437,435,1,0,0,0,437,438,1,0,0,0,438,440,1,0,0,0,439,441,3,32,16,
-		0,440,439,1,0,0,0,440,441,1,0,0,0,441,71,1,0,0,0,442,444,5,68,0,0,443,
-		442,1,0,0,0,444,445,1,0,0,0,445,443,1,0,0,0,445,446,1,0,0,0,446,447,1,
-		0,0,0,447,448,7,4,0,0,448,73,1,0,0,0,449,452,3,76,38,0,450,452,3,78,39,
-		0,451,449,1,0,0,0,451,450,1,0,0,0,452,453,1,0,0,0,453,451,1,0,0,0,453,
-		454,1,0,0,0,454,75,1,0,0,0,455,456,3,80,40,0,456,457,5,2,0,0,457,458,3,
-		98,49,0,458,77,1,0,0,0,459,460,3,80,40,0,460,79,1,0,0,0,461,462,5,1,0,
-		0,462,476,5,43,0,0,463,474,5,43,0,0,464,472,5,43,0,0,465,470,5,43,0,0,
-		466,468,5,43,0,0,467,469,5,43,0,0,468,467,1,0,0,0,468,469,1,0,0,0,469,
-		471,1,0,0,0,470,466,1,0,0,0,470,471,1,0,0,0,471,473,1,0,0,0,472,465,1,
-		0,0,0,472,473,1,0,0,0,473,475,1,0,0,0,474,464,1,0,0,0,474,475,1,0,0,0,
-		475,477,1,0,0,0,476,463,1,0,0,0,476,477,1,0,0,0,477,81,1,0,0,0,478,479,
-		5,1,0,0,479,480,3,84,42,0,480,481,5,1,0,0,481,482,3,90,45,0,482,483,5,
-		1,0,0,483,488,3,86,43,0,484,485,5,1,0,0,485,487,3,86,43,0,486,484,1,0,
-		0,0,487,490,1,0,0,0,488,486,1,0,0,0,488,489,1,0,0,0,489,491,1,0,0,0,490,
-		488,1,0,0,0,491,492,5,1,0,0,492,83,1,0,0,0,493,494,5,62,0,0,494,499,3,
-		88,44,0,495,496,5,62,0,0,496,498,3,88,44,0,497,495,1,0,0,0,498,501,1,0,
-		0,0,499,497,1,0,0,0,499,500,1,0,0,0,500,502,1,0,0,0,501,499,1,0,0,0,502,
-		503,5,62,0,0,503,85,1,0,0,0,504,505,5,62,0,0,505,510,3,88,44,0,506,507,
-		5,62,0,0,507,509,3,88,44,0,508,506,1,0,0,0,509,512,1,0,0,0,510,508,1,0,
-		0,0,510,511,1,0,0,0,511,513,1,0,0,0,512,510,1,0,0,0,513,514,5,62,0,0,514,
-		87,1,0,0,0,515,517,8,5,0,0,516,515,1,0,0,0,517,520,1,0,0,0,518,516,1,0,
-		0,0,518,519,1,0,0,0,519,89,1,0,0,0,520,518,1,0,0,0,521,522,5,62,0,0,522,
-		527,3,92,46,0,523,524,5,62,0,0,524,526,3,92,46,0,525,523,1,0,0,0,526,529,
-		1,0,0,0,527,525,1,0,0,0,527,528,1,0,0,0,528,530,1,0,0,0,529,527,1,0,0,
-		0,530,531,5,62,0,0,531,91,1,0,0,0,532,534,5,2,0,0,533,532,1,0,0,0,533,
-		534,1,0,0,0,534,536,1,0,0,0,535,537,5,47,0,0,536,535,1,0,0,0,536,537,1,
-		0,0,0,537,539,1,0,0,0,538,540,5,64,0,0,539,538,1,0,0,0,540,541,1,0,0,0,
-		541,539,1,0,0,0,541,542,1,0,0,0,542,544,1,0,0,0,543,545,5,47,0,0,544,543,
-		1,0,0,0,544,545,1,0,0,0,545,547,1,0,0,0,546,548,5,2,0,0,547,546,1,0,0,
-		0,547,548,1,0,0,0,548,93,1,0,0,0,549,550,5,1,0,0,550,551,5,49,0,0,551,
-		552,5,36,0,0,552,553,3,102,51,0,553,554,5,37,0,0,554,555,5,38,0,0,555,
-		556,3,104,52,0,556,557,5,39,0,0,557,558,3,100,50,0,558,95,1,0,0,0,559,
-		560,5,1,0,0,560,561,3,100,50,0,561,97,1,0,0,0,562,565,3,110,55,0,563,565,
-		8,6,0,0,564,562,1,0,0,0,564,563,1,0,0,0,565,566,1,0,0,0,566,564,1,0,0,
-		0,566,567,1,0,0,0,567,99,1,0,0,0,568,571,3,110,55,0,569,571,8,6,0,0,570,
-		568,1,0,0,0,570,569,1,0,0,0,571,574,1,0,0,0,572,570,1,0,0,0,572,573,1,
-		0,0,0,573,101,1,0,0,0,574,572,1,0,0,0,575,577,8,7,0,0,576,575,1,0,0,0,
-		577,578,1,0,0,0,578,576,1,0,0,0,578,579,1,0,0,0,579,103,1,0,0,0,580,582,
-		8,8,0,0,581,580,1,0,0,0,582,583,1,0,0,0,583,581,1,0,0,0,583,584,1,0,0,
-		0,584,105,1,0,0,0,585,587,8,9,0,0,586,585,1,0,0,0,587,588,1,0,0,0,588,
-		586,1,0,0,0,588,589,1,0,0,0,589,107,1,0,0,0,590,593,3,110,55,0,591,593,
-		8,6,0,0,592,590,1,0,0,0,592,591,1,0,0,0,593,594,1,0,0,0,594,595,1,0,0,
-		0,594,592,1,0,0,0,595,109,1,0,0,0,596,599,3,112,56,0,597,599,3,114,57,
-		0,598,596,1,0,0,0,598,597,1,0,0,0,599,111,1,0,0,0,600,601,5,42,0,0,601,
-		602,3,106,53,0,602,603,5,43,0,0,603,113,1,0,0,0,604,605,5,36,0,0,605,606,
-		3,102,51,0,606,607,5,37,0,0,607,608,5,38,0,0,608,609,3,104,52,0,609,610,
-		5,39,0,0,610,115,1,0,0,0,79,125,127,132,143,145,154,156,158,160,162,168,
-		177,186,191,198,205,215,222,232,239,281,295,302,307,312,320,324,328,332,
-		337,342,347,352,358,364,367,373,376,382,385,392,397,402,407,413,419,422,
-		428,431,437,440,445,451,453,468,470,472,474,476,488,499,510,518,527,533,
-		536,541,544,547,564,566,570,572,578,583,588,592,594,598
+		9,0,1,0,1,0,1,1,1,1,1,1,1,1,1,1,4,1,138,8,1,11,1,12,1,139,3,1,142,8,1,
+		1,1,1,1,1,1,1,1,1,1,3,1,149,8,1,1,2,1,2,1,2,1,2,1,2,1,2,1,2,3,2,158,8,
+		2,3,2,160,8,2,3,2,162,8,2,3,2,164,8,2,3,2,166,8,2,1,3,1,3,1,3,4,3,171,
+		8,3,11,3,12,3,172,1,3,1,3,1,3,1,3,4,3,179,8,3,11,3,12,3,180,1,3,3,3,184,
+		8,3,1,4,1,4,5,4,188,8,4,10,4,12,4,191,9,4,1,4,1,4,1,4,1,4,5,4,197,8,4,
+		10,4,12,4,200,9,4,1,4,1,4,1,4,1,4,5,4,206,8,4,10,4,12,4,209,9,4,1,4,1,
+		4,3,4,213,8,4,1,5,1,5,1,5,5,5,218,8,5,10,5,12,5,221,9,5,1,5,1,5,5,5,225,
+		8,5,10,5,12,5,228,9,5,1,5,1,5,1,6,1,6,1,6,5,6,235,8,6,10,6,12,6,238,9,
+		6,1,6,1,6,5,6,242,8,6,10,6,12,6,245,9,6,1,6,1,6,1,7,1,7,1,7,5,7,252,8,
+		7,10,7,12,7,255,9,7,1,7,1,7,5,7,259,8,7,10,7,12,7,262,9,7,1,7,1,7,1,8,
+		1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,8,1,9,1,9,1,9,1,9,1,
+		9,1,9,1,9,1,9,1,9,1,9,1,10,1,10,1,10,1,10,1,10,1,10,1,11,1,11,1,11,1,11,
+		1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,1,11,
+		1,11,1,11,3,11,316,8,11,1,12,1,12,1,12,3,12,321,8,12,1,12,5,12,324,8,12,
+		10,12,12,12,327,9,12,1,13,1,13,1,13,1,14,1,14,3,14,334,8,14,1,15,1,15,
+		3,15,338,8,15,1,16,1,16,3,16,342,8,16,1,17,1,17,3,17,346,8,17,1,18,4,18,
+		349,8,18,11,18,12,18,350,1,19,4,19,354,8,19,11,19,12,19,355,1,20,4,20,
+		359,8,20,11,20,12,20,360,1,21,4,21,364,8,21,11,21,12,21,365,1,22,1,22,
+		1,22,1,22,3,22,372,8,22,1,23,1,23,1,23,1,23,3,23,378,8,23,1,23,3,23,381,
+		8,23,1,24,1,24,1,24,1,24,3,24,387,8,24,1,24,3,24,390,8,24,1,25,1,25,1,
+		25,1,25,3,25,396,8,25,1,25,3,25,399,8,25,1,26,1,26,1,27,4,27,404,8,27,
+		11,27,12,27,405,1,28,4,28,409,8,28,11,28,12,28,410,1,29,4,29,414,8,29,
+		11,29,12,29,415,1,30,4,30,419,8,30,11,30,12,30,420,1,31,1,31,1,31,1,31,
+		3,31,427,8,31,1,32,1,32,1,32,1,32,3,32,433,8,32,1,32,3,32,436,8,32,1,33,
+		1,33,1,33,1,33,3,33,442,8,33,1,33,3,33,445,8,33,1,34,1,34,1,34,1,34,3,
+		34,451,8,34,1,34,3,34,454,8,34,1,35,4,35,457,8,35,11,35,12,35,458,1,35,
+		1,35,1,36,1,36,4,36,465,8,36,11,36,12,36,466,1,37,1,37,1,37,1,37,1,38,
+		1,38,1,39,1,39,1,39,1,39,1,39,1,39,1,39,3,39,482,8,39,3,39,484,8,39,3,
+		39,486,8,39,3,39,488,8,39,3,39,490,8,39,1,40,1,40,1,40,1,40,1,40,1,40,
+		1,40,1,40,5,40,500,8,40,10,40,12,40,503,9,40,1,40,1,40,1,41,1,41,1,41,
+		1,41,5,41,511,8,41,10,41,12,41,514,9,41,1,41,1,41,1,42,1,42,1,42,1,42,
+		5,42,522,8,42,10,42,12,42,525,9,42,1,42,1,42,1,43,5,43,530,8,43,10,43,
+		12,43,533,9,43,1,44,1,44,1,44,1,44,5,44,539,8,44,10,44,12,44,542,9,44,
+		1,44,1,44,1,45,3,45,547,8,45,1,45,3,45,550,8,45,1,45,4,45,553,8,45,11,
+		45,12,45,554,1,45,3,45,558,8,45,1,45,3,45,561,8,45,1,46,1,46,1,46,1,46,
+		1,46,1,46,1,46,1,46,1,46,1,46,1,47,1,47,1,47,1,48,1,48,4,48,578,8,48,11,
+		48,12,48,579,1,49,1,49,5,49,584,8,49,10,49,12,49,587,9,49,1,50,4,50,590,
+		8,50,11,50,12,50,591,1,51,4,51,595,8,51,11,51,12,51,596,1,52,4,52,600,
+		8,52,11,52,12,52,601,1,53,1,53,4,53,606,8,53,11,53,12,53,607,1,54,5,54,
+		611,8,54,10,54,12,54,614,9,54,1,55,1,55,3,55,618,8,55,1,56,1,56,1,56,1,
+		56,1,57,1,57,1,57,1,57,1,57,1,57,1,57,1,57,2,607,612,0,58,0,2,4,6,8,10,
+		12,14,16,18,20,22,24,26,28,30,32,34,36,38,40,42,44,46,48,50,52,54,56,58,
+		60,62,64,66,68,70,72,74,76,78,80,82,84,86,88,90,92,94,96,98,100,102,104,
+		106,108,110,112,114,0,10,2,0,2,2,64,64,2,0,2,2,61,61,2,0,2,2,65,65,1,0,
+		64,66,2,0,39,39,44,44,2,0,1,1,62,62,1,0,1,1,2,0,1,1,37,37,2,0,1,1,39,39,
+		2,0,1,1,43,43,662,0,127,1,0,0,0,2,148,1,0,0,0,4,150,1,0,0,0,6,183,1,0,
+		0,0,8,212,1,0,0,0,10,214,1,0,0,0,12,231,1,0,0,0,14,248,1,0,0,0,16,265,
+		1,0,0,0,18,279,1,0,0,0,20,289,1,0,0,0,22,315,1,0,0,0,24,317,1,0,0,0,26,
+		328,1,0,0,0,28,333,1,0,0,0,30,337,1,0,0,0,32,341,1,0,0,0,34,345,1,0,0,
+		0,36,348,1,0,0,0,38,353,1,0,0,0,40,358,1,0,0,0,42,363,1,0,0,0,44,367,1,
+		0,0,0,46,373,1,0,0,0,48,382,1,0,0,0,50,391,1,0,0,0,52,400,1,0,0,0,54,403,
+		1,0,0,0,56,408,1,0,0,0,58,413,1,0,0,0,60,418,1,0,0,0,62,422,1,0,0,0,64,
+		428,1,0,0,0,66,437,1,0,0,0,68,446,1,0,0,0,70,456,1,0,0,0,72,464,1,0,0,
+		0,74,468,1,0,0,0,76,472,1,0,0,0,78,474,1,0,0,0,80,491,1,0,0,0,82,506,1,
+		0,0,0,84,517,1,0,0,0,86,531,1,0,0,0,88,534,1,0,0,0,90,546,1,0,0,0,92,562,
+		1,0,0,0,94,572,1,0,0,0,96,577,1,0,0,0,98,585,1,0,0,0,100,589,1,0,0,0,102,
+		594,1,0,0,0,104,599,1,0,0,0,106,605,1,0,0,0,108,612,1,0,0,0,110,617,1,
+		0,0,0,112,619,1,0,0,0,114,623,1,0,0,0,116,126,3,2,1,0,117,126,3,8,4,0,
+		118,126,3,22,11,0,119,126,3,24,12,0,120,126,3,28,14,0,121,126,3,72,36,
+		0,122,126,3,80,40,0,123,126,3,92,46,0,124,126,3,94,47,0,125,116,1,0,0,
+		0,125,117,1,0,0,0,125,118,1,0,0,0,125,119,1,0,0,0,125,120,1,0,0,0,125,
+		121,1,0,0,0,125,122,1,0,0,0,125,123,1,0,0,0,125,124,1,0,0,0,126,129,1,
+		0,0,0,127,125,1,0,0,0,127,128,1,0,0,0,128,130,1,0,0,0,129,127,1,0,0,0,
+		130,131,5,0,0,1,131,1,1,0,0,0,132,133,3,4,2,0,133,134,5,2,0,0,134,141,
+		3,106,53,0,135,137,5,2,0,0,136,138,5,52,0,0,137,136,1,0,0,0,138,139,1,
+		0,0,0,139,137,1,0,0,0,139,140,1,0,0,0,140,142,1,0,0,0,141,135,1,0,0,0,
+		141,142,1,0,0,0,142,149,1,0,0,0,143,144,5,1,0,0,144,145,3,96,48,0,145,
+		146,3,6,3,0,146,149,1,0,0,0,147,149,3,4,2,0,148,132,1,0,0,0,148,143,1,
+		0,0,0,148,147,1,0,0,0,149,3,1,0,0,0,150,151,5,1,0,0,151,165,5,52,0,0,152,
+		163,5,52,0,0,153,161,5,52,0,0,154,159,5,52,0,0,155,157,5,52,0,0,156,158,
+		5,52,0,0,157,156,1,0,0,0,157,158,1,0,0,0,158,160,1,0,0,0,159,155,1,0,0,
+		0,159,160,1,0,0,0,160,162,1,0,0,0,161,154,1,0,0,0,161,162,1,0,0,0,162,
+		164,1,0,0,0,163,153,1,0,0,0,163,164,1,0,0,0,164,166,1,0,0,0,165,152,1,
+		0,0,0,165,166,1,0,0,0,166,5,1,0,0,0,167,168,5,1,0,0,168,170,5,64,0,0,169,
+		171,5,64,0,0,170,169,1,0,0,0,171,172,1,0,0,0,172,170,1,0,0,0,172,173,1,
+		0,0,0,173,174,1,0,0,0,174,184,5,1,0,0,175,176,5,1,0,0,176,178,5,57,0,0,
+		177,179,5,57,0,0,178,177,1,0,0,0,179,180,1,0,0,0,180,178,1,0,0,0,180,181,
+		1,0,0,0,181,182,1,0,0,0,182,184,5,1,0,0,183,167,1,0,0,0,183,175,1,0,0,
+		0,184,7,1,0,0,0,185,189,3,10,5,0,186,188,7,0,0,0,187,186,1,0,0,0,188,191,
+		1,0,0,0,189,187,1,0,0,0,189,190,1,0,0,0,190,192,1,0,0,0,191,189,1,0,0,
+		0,192,193,5,1,0,0,193,213,1,0,0,0,194,198,3,12,6,0,195,197,7,1,0,0,196,
+		195,1,0,0,0,197,200,1,0,0,0,198,196,1,0,0,0,198,199,1,0,0,0,199,201,1,
+		0,0,0,200,198,1,0,0,0,201,202,5,1,0,0,202,213,1,0,0,0,203,207,3,14,7,0,
+		204,206,7,2,0,0,205,204,1,0,0,0,206,209,1,0,0,0,207,205,1,0,0,0,207,208,
+		1,0,0,0,208,210,1,0,0,0,209,207,1,0,0,0,210,211,5,1,0,0,211,213,1,0,0,
+		0,212,185,1,0,0,0,212,194,1,0,0,0,212,203,1,0,0,0,213,9,1,0,0,0,214,215,
+		5,1,0,0,215,219,5,64,0,0,216,218,5,2,0,0,217,216,1,0,0,0,218,221,1,0,0,
+		0,219,217,1,0,0,0,219,220,1,0,0,0,220,222,1,0,0,0,221,219,1,0,0,0,222,
+		226,5,64,0,0,223,225,5,2,0,0,224,223,1,0,0,0,225,228,1,0,0,0,226,224,1,
+		0,0,0,226,227,1,0,0,0,227,229,1,0,0,0,228,226,1,0,0,0,229,230,5,64,0,0,
+		230,11,1,0,0,0,231,232,5,1,0,0,232,236,5,61,0,0,233,235,5,2,0,0,234,233,
+		1,0,0,0,235,238,1,0,0,0,236,234,1,0,0,0,236,237,1,0,0,0,237,239,1,0,0,
+		0,238,236,1,0,0,0,239,243,5,61,0,0,240,242,5,2,0,0,241,240,1,0,0,0,242,
+		245,1,0,0,0,243,241,1,0,0,0,243,244,1,0,0,0,244,246,1,0,0,0,245,243,1,
+		0,0,0,246,247,5,61,0,0,247,13,1,0,0,0,248,249,5,1,0,0,249,253,5,65,0,0,
+		250,252,5,2,0,0,251,250,1,0,0,0,252,255,1,0,0,0,253,251,1,0,0,0,253,254,
+		1,0,0,0,254,256,1,0,0,0,255,253,1,0,0,0,256,260,5,65,0,0,257,259,5,2,0,
+		0,258,257,1,0,0,0,259,262,1,0,0,0,260,258,1,0,0,0,260,261,1,0,0,0,261,
+		263,1,0,0,0,262,260,1,0,0,0,263,264,5,65,0,0,264,15,1,0,0,0,265,266,5,
+		1,0,0,266,267,5,2,0,0,267,268,5,2,0,0,268,269,5,2,0,0,269,270,5,2,0,0,
+		270,271,5,2,0,0,271,272,5,2,0,0,272,273,5,2,0,0,273,274,5,2,0,0,274,275,
+		5,2,0,0,275,276,5,2,0,0,276,277,5,2,0,0,277,278,5,2,0,0,278,17,1,0,0,0,
+		279,280,5,1,0,0,280,281,5,2,0,0,281,282,5,2,0,0,282,283,5,2,0,0,283,284,
+		5,2,0,0,284,285,5,2,0,0,285,286,5,2,0,0,286,287,5,2,0,0,287,288,5,2,0,
+		0,288,19,1,0,0,0,289,290,5,1,0,0,290,291,5,2,0,0,291,292,5,2,0,0,292,293,
+		5,2,0,0,293,294,5,2,0,0,294,21,1,0,0,0,295,296,5,1,0,0,296,297,5,67,0,
+		0,297,298,5,67,0,0,298,299,5,67,0,0,299,300,3,108,54,0,300,301,5,67,0,
+		0,301,302,5,67,0,0,302,303,5,67,0,0,303,304,3,98,49,0,304,316,1,0,0,0,
+		305,306,5,1,0,0,306,307,5,63,0,0,307,308,5,63,0,0,308,309,5,63,0,0,309,
+		310,3,108,54,0,310,311,5,63,0,0,311,312,5,63,0,0,312,313,5,63,0,0,313,
+		314,3,98,49,0,314,316,1,0,0,0,315,295,1,0,0,0,315,305,1,0,0,0,316,23,1,
+		0,0,0,317,318,5,1,0,0,318,325,3,26,13,0,319,321,5,1,0,0,320,319,1,0,0,
+		0,320,321,1,0,0,0,321,322,1,0,0,0,322,324,3,26,13,0,323,320,1,0,0,0,324,
+		327,1,0,0,0,325,323,1,0,0,0,325,326,1,0,0,0,326,25,1,0,0,0,327,325,1,0,
+		0,0,328,329,3,20,10,0,329,330,3,96,48,0,330,27,1,0,0,0,331,334,3,42,21,
+		0,332,334,3,60,30,0,333,331,1,0,0,0,333,332,1,0,0,0,334,29,1,0,0,0,335,
+		338,3,40,20,0,336,338,3,58,29,0,337,335,1,0,0,0,337,336,1,0,0,0,338,31,
+		1,0,0,0,339,342,3,38,19,0,340,342,3,56,28,0,341,339,1,0,0,0,341,340,1,
+		0,0,0,342,33,1,0,0,0,343,346,3,36,18,0,344,346,3,54,27,0,345,343,1,0,0,
+		0,345,344,1,0,0,0,346,35,1,0,0,0,347,349,3,44,22,0,348,347,1,0,0,0,349,
+		350,1,0,0,0,350,348,1,0,0,0,350,351,1,0,0,0,351,37,1,0,0,0,352,354,3,46,
+		23,0,353,352,1,0,0,0,354,355,1,0,0,0,355,353,1,0,0,0,355,356,1,0,0,0,356,
+		39,1,0,0,0,357,359,3,48,24,0,358,357,1,0,0,0,359,360,1,0,0,0,360,358,1,
+		0,0,0,360,361,1,0,0,0,361,41,1,0,0,0,362,364,3,50,25,0,363,362,1,0,0,0,
+		364,365,1,0,0,0,365,363,1,0,0,0,365,366,1,0,0,0,366,43,1,0,0,0,367,368,
+		3,16,8,0,368,371,3,52,26,0,369,370,5,2,0,0,370,372,3,96,48,0,371,369,1,
+		0,0,0,371,372,1,0,0,0,372,45,1,0,0,0,373,374,3,18,9,0,374,377,3,52,26,
+		0,375,376,5,2,0,0,376,378,3,96,48,0,377,375,1,0,0,0,377,378,1,0,0,0,378,
+		380,1,0,0,0,379,381,3,34,17,0,380,379,1,0,0,0,380,381,1,0,0,0,381,47,1,
+		0,0,0,382,383,3,20,10,0,383,386,3,52,26,0,384,385,5,2,0,0,385,387,3,96,
+		48,0,386,384,1,0,0,0,386,387,1,0,0,0,387,389,1,0,0,0,388,390,3,32,16,0,
+		389,388,1,0,0,0,389,390,1,0,0,0,390,49,1,0,0,0,391,392,5,1,0,0,392,395,
+		3,52,26,0,393,394,5,2,0,0,394,396,3,96,48,0,395,393,1,0,0,0,395,396,1,
+		0,0,0,396,398,1,0,0,0,397,399,3,30,15,0,398,397,1,0,0,0,398,399,1,0,0,
+		0,399,51,1,0,0,0,400,401,7,3,0,0,401,53,1,0,0,0,402,404,3,62,31,0,403,
+		402,1,0,0,0,404,405,1,0,0,0,405,403,1,0,0,0,405,406,1,0,0,0,406,55,1,0,
+		0,0,407,409,3,64,32,0,408,407,1,0,0,0,409,410,1,0,0,0,410,408,1,0,0,0,
+		410,411,1,0,0,0,411,57,1,0,0,0,412,414,3,66,33,0,413,412,1,0,0,0,414,415,
+		1,0,0,0,415,413,1,0,0,0,415,416,1,0,0,0,416,59,1,0,0,0,417,419,3,68,34,
+		0,418,417,1,0,0,0,419,420,1,0,0,0,420,418,1,0,0,0,420,421,1,0,0,0,421,
+		61,1,0,0,0,422,423,3,16,8,0,423,426,3,70,35,0,424,425,5,2,0,0,425,427,
+		3,96,48,0,426,424,1,0,0,0,426,427,1,0,0,0,427,63,1,0,0,0,428,429,3,18,
+		9,0,429,432,3,70,35,0,430,431,5,2,0,0,431,433,3,96,48,0,432,430,1,0,0,
+		0,432,433,1,0,0,0,433,435,1,0,0,0,434,436,3,34,17,0,435,434,1,0,0,0,435,
+		436,1,0,0,0,436,65,1,0,0,0,437,438,3,20,10,0,438,441,3,70,35,0,439,440,
+		5,2,0,0,440,442,3,96,48,0,441,439,1,0,0,0,441,442,1,0,0,0,442,444,1,0,
+		0,0,443,445,3,32,16,0,444,443,1,0,0,0,444,445,1,0,0,0,445,67,1,0,0,0,446,
+		447,5,1,0,0,447,450,3,70,35,0,448,449,5,2,0,0,449,451,3,96,48,0,450,448,
+		1,0,0,0,450,451,1,0,0,0,451,453,1,0,0,0,452,454,3,30,15,0,453,452,1,0,
+		0,0,453,454,1,0,0,0,454,69,1,0,0,0,455,457,5,68,0,0,456,455,1,0,0,0,457,
+		458,1,0,0,0,458,456,1,0,0,0,458,459,1,0,0,0,459,460,1,0,0,0,460,461,7,
+		4,0,0,461,71,1,0,0,0,462,465,3,74,37,0,463,465,3,76,38,0,464,462,1,0,0,
+		0,464,463,1,0,0,0,465,466,1,0,0,0,466,464,1,0,0,0,466,467,1,0,0,0,467,
+		73,1,0,0,0,468,469,3,78,39,0,469,470,5,2,0,0,470,471,3,96,48,0,471,75,
+		1,0,0,0,472,473,3,78,39,0,473,77,1,0,0,0,474,475,5,1,0,0,475,489,5,43,
+		0,0,476,487,5,43,0,0,477,485,5,43,0,0,478,483,5,43,0,0,479,481,5,43,0,
+		0,480,482,5,43,0,0,481,480,1,0,0,0,481,482,1,0,0,0,482,484,1,0,0,0,483,
+		479,1,0,0,0,483,484,1,0,0,0,484,486,1,0,0,0,485,478,1,0,0,0,485,486,1,
+		0,0,0,486,488,1,0,0,0,487,477,1,0,0,0,487,488,1,0,0,0,488,490,1,0,0,0,
+		489,476,1,0,0,0,489,490,1,0,0,0,490,79,1,0,0,0,491,492,5,1,0,0,492,493,
+		3,82,41,0,493,494,5,1,0,0,494,495,3,88,44,0,495,496,5,1,0,0,496,501,3,
+		84,42,0,497,498,5,1,0,0,498,500,3,84,42,0,499,497,1,0,0,0,500,503,1,0,
+		0,0,501,499,1,0,0,0,501,502,1,0,0,0,502,504,1,0,0,0,503,501,1,0,0,0,504,
+		505,5,1,0,0,505,81,1,0,0,0,506,507,5,62,0,0,507,512,3,86,43,0,508,509,
+		5,62,0,0,509,511,3,86,43,0,510,508,1,0,0,0,511,514,1,0,0,0,512,510,1,0,
+		0,0,512,513,1,0,0,0,513,515,1,0,0,0,514,512,1,0,0,0,515,516,5,62,0,0,516,
+		83,1,0,0,0,517,518,5,62,0,0,518,523,3,86,43,0,519,520,5,62,0,0,520,522,
+		3,86,43,0,521,519,1,0,0,0,522,525,1,0,0,0,523,521,1,0,0,0,523,524,1,0,
+		0,0,524,526,1,0,0,0,525,523,1,0,0,0,526,527,5,62,0,0,527,85,1,0,0,0,528,
+		530,8,5,0,0,529,528,1,0,0,0,530,533,1,0,0,0,531,529,1,0,0,0,531,532,1,
+		0,0,0,532,87,1,0,0,0,533,531,1,0,0,0,534,535,5,62,0,0,535,540,3,90,45,
+		0,536,537,5,62,0,0,537,539,3,90,45,0,538,536,1,0,0,0,539,542,1,0,0,0,540,
+		538,1,0,0,0,540,541,1,0,0,0,541,543,1,0,0,0,542,540,1,0,0,0,543,544,5,
+		62,0,0,544,89,1,0,0,0,545,547,5,2,0,0,546,545,1,0,0,0,546,547,1,0,0,0,
+		547,549,1,0,0,0,548,550,5,47,0,0,549,548,1,0,0,0,549,550,1,0,0,0,550,552,
+		1,0,0,0,551,553,5,64,0,0,552,551,1,0,0,0,553,554,1,0,0,0,554,552,1,0,0,
+		0,554,555,1,0,0,0,555,557,1,0,0,0,556,558,5,47,0,0,557,556,1,0,0,0,557,
+		558,1,0,0,0,558,560,1,0,0,0,559,561,5,2,0,0,560,559,1,0,0,0,560,561,1,
+		0,0,0,561,91,1,0,0,0,562,563,5,1,0,0,563,564,5,49,0,0,564,565,5,36,0,0,
+		565,566,3,100,50,0,566,567,5,37,0,0,567,568,5,38,0,0,568,569,3,102,51,
+		0,569,570,5,39,0,0,570,571,3,98,49,0,571,93,1,0,0,0,572,573,5,1,0,0,573,
+		574,3,98,49,0,574,95,1,0,0,0,575,578,3,110,55,0,576,578,8,6,0,0,577,575,
+		1,0,0,0,577,576,1,0,0,0,578,579,1,0,0,0,579,577,1,0,0,0,579,580,1,0,0,
+		0,580,97,1,0,0,0,581,584,3,110,55,0,582,584,8,6,0,0,583,581,1,0,0,0,583,
+		582,1,0,0,0,584,587,1,0,0,0,585,583,1,0,0,0,585,586,1,0,0,0,586,99,1,0,
+		0,0,587,585,1,0,0,0,588,590,8,7,0,0,589,588,1,0,0,0,590,591,1,0,0,0,591,
+		589,1,0,0,0,591,592,1,0,0,0,592,101,1,0,0,0,593,595,8,8,0,0,594,593,1,
+		0,0,0,595,596,1,0,0,0,596,594,1,0,0,0,596,597,1,0,0,0,597,103,1,0,0,0,
+		598,600,8,9,0,0,599,598,1,0,0,0,600,601,1,0,0,0,601,599,1,0,0,0,601,602,
+		1,0,0,0,602,105,1,0,0,0,603,606,3,110,55,0,604,606,8,6,0,0,605,603,1,0,
+		0,0,605,604,1,0,0,0,606,607,1,0,0,0,607,608,1,0,0,0,607,605,1,0,0,0,608,
+		107,1,0,0,0,609,611,9,0,0,0,610,609,1,0,0,0,611,614,1,0,0,0,612,613,1,
+		0,0,0,612,610,1,0,0,0,613,109,1,0,0,0,614,612,1,0,0,0,615,618,3,112,56,
+		0,616,618,3,114,57,0,617,615,1,0,0,0,617,616,1,0,0,0,618,111,1,0,0,0,619,
+		620,5,42,0,0,620,621,3,104,52,0,621,622,5,43,0,0,622,113,1,0,0,0,623,624,
+		5,36,0,0,624,625,3,100,50,0,625,626,5,37,0,0,626,627,5,38,0,0,627,628,
+		3,102,51,0,628,629,5,39,0,0,629,115,1,0,0,0,81,125,127,139,141,148,157,
+		159,161,163,165,172,180,183,189,198,207,212,219,226,236,243,253,260,315,
+		320,325,333,337,341,345,350,355,360,365,371,377,380,386,389,395,398,405,
+		410,415,420,426,432,435,441,444,450,453,458,464,466,481,483,485,487,489,
+		501,512,523,531,540,546,549,554,557,560,577,579,583,585,591,596,601,605,
+		607,612,617
 	};
 
 	public static readonly ATN _ATN =

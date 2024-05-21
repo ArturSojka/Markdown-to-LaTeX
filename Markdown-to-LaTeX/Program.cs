@@ -1,25 +1,33 @@
 ﻿using Antlr4.Runtime;
-using Markdown;
+using MarkdownParsing;
 namespace Markdown_to_LaTeX;
 
 class Program
 {
     static void Main(string[] args)
     {
-        string input = """
-                       # Head One
-                       ## Head Two
-                       ### Head Three
-                       
-                       """;
-        input = input.Replace("\t", "    ");
-        Console.WriteLine(input);
-        
-        AntlrInputStream inputStream = new AntlrInputStream(input);
+        string file = "przyklad.md";
+        MarkdownPreprocessor mdPreprocessor = new(file);
+        mdPreprocessor.ProcessFile();
+        AntlrFileStream inputStream = new(file);
         MarkdownLexer mdLexer = new(inputStream);
-        for (var token = mdLexer.NextToken(); token.Type != MarkdownLexer.Eof; token = mdLexer.NextToken())
-        {
-            Console.WriteLine(token.ToString());
-        }
+        CommonTokenStream tokenStream = new(mdLexer);
+        Markdown mdParser = new(tokenStream);
+
+        Markdown.DocumentContext context = mdParser.document();
+
+        MdVisitor visitor = new();
+        Console.WriteLine("""
+                          \documentclass{article}
+                          \usepackage[polish]{babel}
+                          \usepackage[utf8]{inputenc}
+                          \usepackage[T1]{fontenc}
+                          \usepackage{graphicx}
+                          \usepackage{float}
+                          
+                          """);
+        Console.WriteLine(@"\begin{document}");
+        visitor.VisitDocument(context);
+        Console.WriteLine(@"\end{document}");
     }
 }

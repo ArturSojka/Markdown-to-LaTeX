@@ -1,16 +1,22 @@
-﻿parser grammar MarkdownParser;
+﻿parser grammar Markdown;
 options{
     tokenVocab=MarkdownLexer;
 }
 
 // Main rule
-document : (heading | horizontalLine | fencedCode | indentedCodeBlock | list | blockQuote | table | imageLine | textLine)*;
+document : (heading | horizontalLine | fencedCode | indentedCodeBlock | list | blockQuote | table | imageLine | textLine)* EOF;
 
-// Headings - only atx style
-heading : atxHeading | emptyHeading;
-emptyHeading : headingStart;
-atxHeading : headingStart Space headingText (Space Sharp+)?;
+// Headings
+heading
+    : headingStart Space headingText (Space Sharp+)?  #atxHeading
+    | Newline requiredText setextEnd                  #setextHeading
+    | headingStart                                    #emptyHeading
+    ;
 headingStart : Newline Sharp (Sharp (Sharp (Sharp (Sharp Sharp?)?)?)?)?;
+setextEnd
+    : Newline Dash Dash+ Newline
+    | Newline Equal Equal+ Newline
+    ;
 
 // Horizontal lines - require a trailing empty line
 horizontalLine
@@ -31,15 +37,16 @@ indent1 : Newline Space Space Space Space;
 
 // Fenced code blocks
 fencedCode
-    : Newline Code Code Code .*? Code Code Code optionalText
-    | Newline Tilde Tilde Tilde .*? Tilde Tilde Tilde optionalText
+    : Newline Code Code Code fencedText Code Code Code optionalText
+    | Newline Tilde Tilde Tilde fencedText Tilde Tilde Tilde optionalText
     ;
+
 // Indented code blocks - require a preceding empty line
 indentedCodeBlock : Newline indentedCode1 (Newline? indentedCode1)*;
 indentedCode1 : indent1 requiredText;
     
 // Lists - itemized and enumerated with max 3 levels of indentation
-list : iList0 | eList0;
+list  : iList0 | eList0;
 list1 : iList1 | eList1;
 list2 : iList2 | eList2;
 list3 : iList3 | eList3;
@@ -93,6 +100,7 @@ displayText : ~(Newline|RBRACKET)+;
 linkText : ~(Newline|RPAREN)+;
 urlText : ~(Newline|GT)+;
 headingText : (link | ~Newline)+?;
+fencedText : .*?;
 
 // Links
 link : urlLink | textLink;
