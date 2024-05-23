@@ -1,0 +1,21 @@
+# Konwerter Markdown na LaTeX
+
+Projekt zaliczeniowy z przedmiotu Teoria Kompilacji i Kompilatory autorstwa Artura Sojki i Piotra Waluszka.
+
+Konwerter pisany jest w języku C# i jako generatora parsera używa programu ANTLRv4.
+
+## Narzędzia i technologie
+
+- **[ANTLRv4](https://www.antlr.org/)**: Narzędzie do generowania parserów, które umożliwia analizę składniową kodu źródłowego. Wykorzystujemy ANTLR do definiowania gramatyki, z której generujemy klasy parserów w C#. Jest idealne do precyzyjnej analizy tekstu, niezbędnej w naszym projekcie konwersji Markdown do LaTeX.
+- **[ANTLRv4](https://www.antlr.org/)**: Narzędzie do generowania parserów, które umożliwia nam analizę składniową. Wykorzystujemy ANTLR do definiowania gramatyki, z której generujemy klasy parserów w C#.
+
+- **[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)**: Język programowania, w którym tworzymy logikę aplikacji. C# jest znany z wsparcia dla programowania obiektowego i jest często używany w aplikacjach wymagających wysokiej niezawodności i czytelności kodu.
+- **[C#](https://docs.microsoft.com/en-us/dotnet/csharp/)**: Język programowania, w którym tworzymy logikę aplikacji. C# posiada wiele wbudowanych w język funkcji, pomocnych przy parsowaniu i konwersji kodu.
+
+- **[CommonMark Specification](https://spec.commonmark.org/0.31.2/)**: Podstawowa specyfikacja składni Markdown, na której opiera się nasz konwerter. CommonMark jest próbą unifikacji i standaryzacji Markdowna, co pozwala na zachowanie spójności w interpretacji tekstu na różnych platformach.
+- **[CommonMark Specification](https://spec.commonmark.org/0.31.2/)**: Podstawowa specyfikacja składni Markdown, na której wzorujemy nasz konwerter. CommonMark jest powszechnie używaną próbą standaryzacji Markdowna, co pozwala na zachowanie spójności w interpretacji tego formatu przez różne programy.
+
+- **[Pandoc User’s Manual](https://pandoc.org/MANUAL.html#pandocs-markdown)**: Pandoc to wszechstronne narzędzie do konwersji plików Markdown na różne formaty, w tym LaTeX. W naszym projekcie korzystamy z części rozszerzeń Pandoc, co pozwala na obsługę niektórych specyficznych funkcji używanych w Markdown.
+- **[Pandoc](https://pandoc.org/MANUAL.html#pandocs-markdown)**: Pandoc to wszechstronne narzędzie do renderowania plików Markdown, a także ich konwersji na różne formaty, w tym LaTeX. W naszym projekcie korzystamy z części rozszerzeń Pandoc, co pozwala na obsługę niektórych specyficznych funkcji używanych w Markdown.
+
+## Format wejściowy
