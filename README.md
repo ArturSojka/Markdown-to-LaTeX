@@ -19,3 +19,16 @@ Konwerter pisany jest w języku C# i jako generatora parsera używa programu ANT
 - **[Pandoc](https://pandoc.org/MANUAL.html#pandocs-markdown)**: Pandoc to wszechstronne narzędzie do renderowania plików Markdown, a także ich konwersji na różne formaty, w tym LaTeX. W naszym projekcie korzystamy z części rozszerzeń Pandoc, co pozwala na obsługę niektórych specyficznych funkcji używanych w Markdown.
 
 ## Format wejściowy
+
+Wejściem do programu jest plik Markdown o zredukowanej składni. Nasz konwerter bazuje głównie na specyfikacji CommonMark oraz, w mniejszym stopniu, na funkcjonalnościach oferowanych przez Pandoc.
+Ograniczyliśmy składnię do następujących struktur, które nie mogą być w sobie zagnieżdżane:
+- Nagłówki (tylko te rozpoczynające się od `#`)
+- Linie poziome
+- Paragrafy tekstu
+- Listy numerowane i nienumerowane (z najwyżej trzypoziomowym zagnieżdżaniem, elementy nie są kontynuowane w następnej linii)
+- Wcięte bloki kodu
+- Odgrodzone bloki kodu (oznaczone przez dokładnie 3 `` ` `` lub `~` i zawsze poprawnie zamknięte)
+- Cytaty blokowe (nie są kontynuowane w następnej linii, jeśli nie rozpoczyna się znakiem `>`)
+- Obrazy
+- Tabele
+W samym tekście stylizowane są na razie tylko linki do stron internetowych.
