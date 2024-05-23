@@ -32,3 +32,15 @@ Ograniczyliśmy składnię do następujących struktur, które nie mogą być w 
 - Obrazy
 - Tabele
 W samym tekście stylizowane są na razie tylko linki do stron internetowych.
+
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1>Sprawozdanie</h1>
+
+<!-- Wstawienie PDF z atrybutami szerokości i wysokości -->
+<embed src="SprawozdanieKompilatoryArturSojkaPiotrWaluszek.pdf" width="600" height="400">
+
+</body>
+</html>
