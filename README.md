@@ -33,15 +33,7 @@ Ograniczyliśmy składnię do następujących struktur, które nie mogą być w 
 - Tabele
 W samym tekście stylizowane są na razie tylko linki do stron internetowych.
 
-<!DOCTYPE html>
-<html>
-<body>
+# Sprawozdanie
 
-<h1>Sprawozdanie</h1>
+[Sprawozdanie Kompilatory Artur Sojka Piotr Waluszek](./SprawozdanieKompilatoryArturSojkaPiotrWaluszek.pdf)
 
-<!-- Wstawienie PDF z atrybutami szerokości i wysokości -->
-<embed src="./SprawozdanieKompilatoryArturSojkaPiotrWaluszek.pdf" width="600" height="500" type="application/pdf">
-
-
-</body>
-</html>
