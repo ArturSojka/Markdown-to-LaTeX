@@ -40,7 +40,8 @@ W samym tekście stylizowane są na razie tylko linki do stron internetowych.
 <h1>Sprawozdanie</h1>
 
 <!-- Wstawienie PDF z atrybutami szerokości i wysokości -->
-<embed src="SprawozdanieKompilatoryArturSojkaPiotrWaluszek.pdf" width="600" height="400">
+<embed src="./SprawozdanieKompilatoryArturSojkaPiotrWaluszek.pdf" width="600" height="500" type="application/pdf">
+
 
 </body>
 </html>
