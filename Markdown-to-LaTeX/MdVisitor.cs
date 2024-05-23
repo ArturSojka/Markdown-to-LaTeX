@@ -48,18 +48,17 @@ public class MdVisitor : MarkdownBaseVisitor<string?>
 
     public override string VisitHeadingText(Markdown.HeadingTextContext context)
     {
-        string text = context.GetText().ToLatexEscaped();
-        return text;
+        return context.GetText().ToLatexEscaped();
     }
 
     public override string? VisitHorizontalLine(Markdown.HorizontalLineContext context)
     {
-        Console.WriteLine("\\begin{center}\\rule{\\linewidth}{1pt}\\end{center}");
+        Console.WriteLine(@"\begin{center}\rule{\linewidth}{1pt}\end{center}");
         return null;
     }
 
-    private List<List<string>> _rows = new();
-    private int _columnCount;
+    private List<List<string>> _tableRows = new();
+    private int _tableColumnCount;
 
     public override string? VisitTable(Markdown.TableContext context)
     {
@@ -69,18 +68,20 @@ public class MdVisitor : MarkdownBaseVisitor<string?>
         {
             VisitContentRow(row);
         }
-        latex.Append("\\begin{table}[H]");
-        latex.Append(VisitSeparatorRow(context.separatorRow()));
-        foreach (var row in _rows)
+        latex.Append(@"\begin{table}[H]");
+        string beginTabular = VisitSeparatorRow(context.separatorRow());
+        latex.Append(beginTabular);
+        foreach (var row in _tableRows)
         {
-            while(row.Count<_columnCount)
+            while(row.Count<_tableColumnCount)
                 row.Add(" ");
             latex.Append($"\\hline\n{string.Join(" & ", row)} \\\\\n");
         }
-        latex.Append("\\hline\n\\end{tabular}");
-        latex.Append("\n\\end{table}");
+        latex.Append("\\hline\n\\end{tabular}\n");
+        latex.Append(@"\end{table}");
         Console.WriteLine(latex.ToString());
-        _columnCount = 0;
+        _tableRows = new();
+        _tableColumnCount = 0;
         return null;
     }
 
@@ -90,10 +91,12 @@ public class MdVisitor : MarkdownBaseVisitor<string?>
         
         foreach (var content in context.separatorContent())
             centering.Add(VisitSeparatorContent(content));
-        while (centering.Count < _columnCount)
+        
+        while (centering.Count < _tableColumnCount)
             centering.Add("l");
-        if (centering.Count > _columnCount)
-            _columnCount = centering.Count;
+        
+        if (centering.Count > _tableColumnCount)
+            _tableColumnCount = centering.Count;
         
         return $"\\begin{{tabular}}{{|{string.Join('|', centering)}|}}\n";
     }
@@ -115,9 +118,9 @@ public class MdVisitor : MarkdownBaseVisitor<string?>
         List<string> headers = new();
         foreach (var content in context.cellContent())
             headers.Add($"\\textbf{{{VisitCellContent(content)}}}");
-        if (headers.Count > _columnCount)
-            _columnCount = headers.Count;
-        _rows.Add(headers);
+        if (headers.Count > _tableColumnCount)
+            _tableColumnCount = headers.Count;
+        _tableRows.Add(headers);
         return null;
     }
 
@@ -126,9 +129,9 @@ public class MdVisitor : MarkdownBaseVisitor<string?>
         List<string> contents = new();
         foreach(var content in context.cellContent())
             contents.Add(VisitCellContent(content));
-        if (contents.Count > _columnCount)
-            _columnCount = contents.Count;
-        _rows.Add(contents);
+        if (contents.Count > _tableColumnCount)
+            _tableColumnCount = contents.Count;
+        _tableRows.Add(contents);
         return null;
     }
 
