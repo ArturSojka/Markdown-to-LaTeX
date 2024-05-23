@@ -37,3 +37,11 @@ W samym tekście stylizowane są na razie tylko linki do stron internetowych.
 
 [Sprawozdanie Kompilatory Artur Sojka Piotr Waluszek](./SprawozdanieKompilatoryArturSojkaPiotrWaluszek.pdf)
 
+## Podgląd PDF
+
+<iframe src="./SprawozdanieKompilatoryArturSojkaPiotrWaluszek.pdf" width="100%" height="600px">
+    This browser does not support PDFs. Please download the PDF to view it: 
+    <a href="./SprawozdanieKompilatoryArturSojkaPiotrWaluszek.pdf">Download PDF</a>.
+</iframe>
+
+
