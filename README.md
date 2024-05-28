@@ -2,18 +2,55 @@
 - Artur Sojka, asojka@student.agh.edu.pl
 - Piotr Waluszek, waluszekp@student.agh.edu.pl
 
-# Ogólne założenia projektu konwertera Markdown -> LaTeX
+# Opis projektu konwertera Markdown do LaTeX
 
-1. **Formaty wejściowy i wyjściowy**:
-   - Format wejściowy to Markdown, lekki język znaczników używany do formatowania tekstu w prostym formacie.
-   - Format wyjściowy to LaTeX, zaawansowany system składu tekstu, powszechnie używany do tworzenia dokumentów technicznych i naukowych.
+Naszym projektem był konwerter, który przekształca dokumenty napisane w formacie Markdown na dokumenty w formacie LaTeX. Projekt składał się z kilku kluczowych komponentów i etapów implementacji.
 
-2. **Elementy Markdown**:
-   - Rozpoznajemy i konwertujemy elementy Markdown takie jak nagłówki, listy, cytaty, bloki kodu, kod w tekście, wyróżnienia (kursywa, pogrubienie), linki, obrazy i tabele.
+#### a. Opis ogólny programu
 
-3. **Odpowiedniki w LaTeX**:
-   - Każdy element Markdown zamieniamy na odpowiednią komendę lub środowisko LaTeX.
-   - Poprawnie przetwarzamy zagnieżdżone struktury (np. listy w listach, cytaty w cytatach, itp.).
+Celem programu było umożliwienie użytkownikom konwersji dokumentów Markdown do LaTeX. Markdown jest prostym językiem znaczników używanym do formatowania tekstu, podczas gdy LaTeX jest zaawansowanym systemem składu tekstu, powszechnie używanym do tworzenia dokumentów technicznych i naukowych.
+
+#### b. Rodzaj translatora: interpreter czy kompilator
+
+Nasz projekt był **kompilatorem**, który tłumaczy kod źródłowy napisany w Markdown na kod w LaTeX.
+
+#### c. Planowany wynik działania programu
+
+Planowanym wynikiem działania naszego programu był:
+- Konwerter Markdown do LaTeX, który przekształca dokumenty Markdown na format LaTeX, umożliwiając dalszą edycję i profesjonalne składanie dokumentów.
+
+#### d. Język implementacji
+
+ Językiem implementacji był **C#**. Wybraliśmy ten język ze względu na jego wydajność oraz wsparcie dla nowoczesnych technik programowania.
+
+#### e. Sposób realizacji skanera/parsera
+
+Skaner i parser były realizowane za pomocą generatora ANTLR (ANother Tool for Language Recognition), który umożliwia automatyczne generowanie skanerów i parserów na podstawie zdefiniowanej gramatyki.
+
+#### Opis komponentów projektu
+
+- **Markdown-to-LaTeX.csproj**: Plik projektu dla środowiska .NET.
+- **Markdown.g4**: Plik z definicją gramatyki dla parsera ANTLR, który opisuje składnię Markdown.
+- **MarkdownLexer.g4**: Plik z definicją leksykalną dla lexer'a ANTLR, który rozpoznaje tokeny w kodzie Markdown.
+- **MdConverter.cs**: Klasa odpowiedzialna za konwersję z Markdown do LaTeX.
+- **MdPreprocessor.cs**: Klasa zajmująca się wstępnym przetwarzaniem tekstu Markdown przed przekazaniem go do parsera.
+- **MdVisitor.cs**: Klasa odwiedzającego, która przechodzi przez drzewo parsowania wygenerowane przez ANTLR i przekształca je na kod LaTeX.
+- **Program.cs**: Główny plik programu, który inicjalizuje i uruchamia konwerter.
+- **StringExtension.cs**: Klasa zawierająca rozszerzenia dla stringów, pomocna przy przetwarzaniu tekstu.
+- **przyklad.md**: Przykładowy plik Markdown używany do testowania konwertera.
+
+### Szczegółowe kroki implementacji
+
+1. **Definicja gramatyki**:
+   - Zdefiniowaliśmy tokeny dla elementów Markdown (np. `HEADER`, `LIST_ITEM`, `BLOCK_QUOTE`, `BOLD`, `ITALIC`, `CODE`, `LINK`, `IMAGE`).
+   - Zdefiniowaliśmy reguły parsowania tych elementów w plikach `Markdown.g4` i `MarkdownLexer.g4`.
+
+2. **Generowanie parsera i leksera**:
+   - Użyliśmy ANTLR do wygenerowania klas parsera i leksera.
+
+3. **Implementacja klasy odwiedzającej**:
+   - Stworzyliśmy klasę odwiedzającą `MdVisitor`, która rozszerza bazową klasę odwiedzającą wygenerowaną przez ANTLR.
+   - Zaimplementowaliśmy między innymi metody takie jak `VisitHeader`, `VisitListItem`, `VisitBlockQuote`, `VisitBold`, `VisitItalic`, `VisitCode`, `VisitLink`, `VisitImage`.
 
 # Dokumentacja
 
