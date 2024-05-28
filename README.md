@@ -4,8 +4,11 @@
 
 # Opis i założenia projektu
 
-Naszym projektem jest program konwertujący pliki z formatu Markdown na kod LaTeX.
-Program został zaimplementowany w języku C#, z użyciem generatora parserów ANTLRv4.
+- Naszym projektem jest program konwertujący pliki z formatu Markdown na kod LaTeX.
+- Rodzaj translatora: konwerter.
+- Wynik działania programu: Konwersja z formatu Markdown na kod LaTeX.
+- Język implementacji: C#
+- Sposób realizacji skanera i parsera: ANTLRv4.
 
 # Spis tokenów
 
