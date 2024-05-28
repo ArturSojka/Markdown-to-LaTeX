@@ -4,10 +4,6 @@
 
 # Ogólne założenia projektu konwertera Markdown -> LaTeX
 
-Projekt konwertera Markdown do LaTeX powinien spełniać kilka kluczowych założeń oraz obejmować konkretne etapy implementacji. Poniżej przedstawiamy ogólne założenia i kroki, które należy wziąć pod uwagę podczas projektowania i implementacji takiego konwertera.
-
-## Ogólne założenia
-
 1. **Formaty wejściowy i wyjściowy**:
    - Format wejściowy to Markdown, lekki język znaczników używany do formatowania tekstu w prostym formacie.
    - Format wyjściowy to LaTeX, zaawansowany system składu tekstu, powszechnie używany do tworzenia dokumentów technicznych i naukowych.
