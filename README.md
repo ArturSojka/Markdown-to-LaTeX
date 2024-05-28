@@ -327,3 +327,56 @@ link : urlLink | textLink;
 urlLink : LT urlText GT;
 textLink : LBRACKET displayText RBRACKET LPAREN linkText RPAREN;
 ```
+# Instrukcja Obsługi Programu MdToLatex
+
+Program MdToLatex konwertuje pliki w formacie Markdown na pliki w formacie LaTeX. Program można uruchomić z wiersza poleceń, podając odpowiednie argumenty.
+
+## Użycie
+
+```sh
+MdToLatex in.md [out.tex]
+```
+
+## Argumenty
+
+- `in.md`: Ścieżka do pliku Markdown, który ma być przekonwertowany.
+- `[out.tex]` (opcjonalnie): Ścieżka do pliku wyjściowego w formacie LaTeX. Jeśli nie zostanie podany, plik wyjściowy zostanie nazwany tak samo jak plik wejściowy, ale z rozszerzeniem `.tex`.
+
+## Przykłady
+
+1. **Konwersja z domyślną nazwą pliku wyjściowego**
+
+   Jeśli chcesz przekonwertować plik `in.md` i zapisać wynik w pliku `in.tex`:
+
+   ```sh
+   MdToLatex in.md
+   ```
+
+2. **Konwersja z określoną nazwą pliku wyjściowego**
+
+   Jeśli chcesz przekonwertować plik `in.md` i zapisać wynik w pliku `output.tex`:
+
+   ```sh
+   MdToLatex in.md output.tex
+   ```
+
+## Działanie Programu
+
+1. Program sprawdza, czy podano prawidłową liczbę argumentów (1 lub 2).
+2. Program sprawdza, czy plik wejściowy (`in.md`) istnieje.
+3. Jeśli nie podano nazwy pliku wyjściowego, program tworzy nazwę na podstawie pliku wejściowego, zmieniając jego rozszerzenie na `.tex`.
+4. Program konwertuje zawartość pliku Markdown na LaTeX.
+5. Program zapisuje wynik konwersji do pliku wyjściowego (z rozszerzeniem `.tex`).
+6. Program wyświetla komunikat potwierdzający zapis pliku wyjściowego.
+
+## Komunikaty Błędów
+
+- Jeśli podano mniej niż jeden lub więcej niż dwa argumenty:
+  ```sh
+  Użycie: MdToLatex in.md [out.tex]
+  ```
+
+- Jeśli plik wejściowy (`in.md`) nie istnieje:
+  ```sh
+  Nieprawidłowa ścieżka do pliku.
+  ```
