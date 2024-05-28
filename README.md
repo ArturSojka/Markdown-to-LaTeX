@@ -52,19 +52,6 @@ Skaner i parser były realizowane za pomocą generatora ANTLR (ANother Tool for 
    - Stworzyliśmy klasę odwiedzającą `MdVisitor`, która rozszerza bazową klasę odwiedzającą wygenerowaną przez ANTLR.
    - Zaimplementowaliśmy między innymi metody takie jak `VisitHeader`, `VisitListItem`, `VisitBlockQuote`, `VisitBold`, `VisitItalic`, `VisitCode`, `VisitLink`, `VisitImage`.
 
-# Dokumentacja
-
-- Ogólna: [ANTLR4 Documentation](https://github.com/antlr/antlr4/blob/master/doc/index.md)
-- Podstawy dla Pythona: [ANTLR4 Python Target](https://github.com/antlr/antlr4/blob/master/doc/python-target.md)
-- Podstawy dla C#: [ANTLR4 C#](https://github.com/antlr/antlr4/tree/master/runtime/CSharp/src)
-
-## Inne linki
-
-- Gramatyka C11: [C.g4](https://github.com/antlr/grammars-v4/blob/master/c/C.g4)
-- Tutoriale (głównie do C#):
-  - [Getting Started with ANTLR in C#](https://tomassetti.me/getting-started-with-antlr-in-csharp/)
-  - [Listeners and Visitors](https://tomassetti.me/listeners-and-visitors/)
-
 # Kod Preprocesora
 
 ### Namespace Markdown_to_LaTeX
@@ -379,3 +366,17 @@ MdToLatex in.md [out.tex]
   ```sh
   Nieprawidłowa ścieżka do pliku.
   ```
+
+
+## Dokumentacja instalacji ANTLRa
+
+- Ogólna: [ANTLR4 Documentation](https://github.com/antlr/antlr4/blob/master/doc/index.md)
+- Podstawy dla Pythona: [ANTLR4 Python Target](https://github.com/antlr/antlr4/blob/master/doc/python-target.md)
+- Podstawy dla C#: [ANTLR4 C#](https://github.com/antlr/antlr4/tree/master/runtime/CSharp/src)
+
+## Inne linki
+
+- Gramatyka C11: [C.g4](https://github.com/antlr/grammars-v4/blob/master/c/C.g4)
+- Tutoriale (głównie do C#):
+  - [Getting Started with ANTLR in C#](https://tomassetti.me/getting-started-with-antlr-in-csharp/)
+  - [Listeners and Visitors](https://tomassetti.me/listeners-and-visitors/)
