@@ -1,3 +1,8 @@
+# Dane Studentów
+- Artur Sojka, asojka@student.agh.edu.pl
+- Piotr Waluszek, waluszekp@student.agh.edu.pl
+
+
 
 # Dokumentacja
 
