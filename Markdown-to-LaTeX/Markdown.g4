@@ -4,7 +4,7 @@ options{
 }
 
 // Main rule
-document : (heading | horizontalLine | fencedCode | indentedCodeBlock | list | blockQuote | table | imageLine | textLine)* EOF;
+document : (heading | horizontalLine | fencedCode | indentedCodeBlock | list | blockQuote | table | imageLine | linkLine | textLine)* EOF;
 
 // Headings
 heading
@@ -43,7 +43,7 @@ fencedCode
 
 // Indented code blocks - require a preceding empty line
 indentedCodeBlock : Newline indentedCode1 (Newline? indentedCode1)*;
-indentedCode1 : indent1 requiredText;
+indentedCode1 : indent1 codeText;
     
 // Lists - itemized and enumerated with max 3 levels of indentation
 list  : iList0 | eList0;
@@ -89,18 +89,20 @@ cellContent : ~(Newline | Pipe)*;
 separatorRow : Pipe separatorContent (Pipe separatorContent)* Pipe;
 separatorContent : Space? Colon? Dash+ Colon? Space?;
 
-// Images
+// Images and links
 imageLine : Newline Exclamation LBRACKET displayText RBRACKET LPAREN linkText RPAREN optionalText;
+linkLine : Newline link optionalText;
 
 // Text
 textLine : Newline optionalText;
-requiredText : (link | ~Newline)+;
-optionalText : (link | ~Newline)*;
+requiredText : ~Newline+;
+optionalText : ~Newline*;
 displayText : ~(Newline|RBRACKET)+;
-linkText : ~(Newline|RPAREN)+;
-urlText : ~(Newline|GT)+;
-headingText : (link | ~Newline)+?;
+linkText : ~(Newline|Space|RPAREN)+;
+urlText : ~(Newline|Space|GT)+;
+headingText : ~Newline+?;
 fencedText : .*?;
+codeText : ~Newline*?;
 
 // Links
 link : urlLink | textLink;

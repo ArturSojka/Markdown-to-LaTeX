@@ -1,33 +1,32 @@
-﻿using Antlr4.Runtime;
-using MarkdownParsing;
-namespace Markdown_to_LaTeX;
+﻿namespace Markdown_to_LaTeX;
 
 class Program
 {
     static void Main(string[] args)
     {
-        string file = "przyklad.md";
-        MarkdownPreprocessor mdPreprocessor = new(file);
-        mdPreprocessor.ProcessFile();
-        AntlrFileStream inputStream = new(file);
-        MarkdownLexer mdLexer = new(inputStream);
-        CommonTokenStream tokenStream = new(mdLexer);
-        Markdown mdParser = new(tokenStream);
+        if (args.Length < 1 || args.Length > 2)
+        {
+            Console.WriteLine("Użycie: MdToLatex in.md [out.tex]");
+            return;
+        }
 
-        Markdown.DocumentContext context = mdParser.document();
+        string inputPath = args[0];
+        string outputPath = args.Length == 2 ? args[1] : Path.ChangeExtension(inputPath, ".tex");
 
-        MdVisitor visitor = new();
-        Console.WriteLine("""
-                          \documentclass{article}
-                          \usepackage[polish]{babel}
-                          \usepackage[utf8]{inputenc}
-                          \usepackage[T1]{fontenc}
-                          \usepackage{graphicx}
-                          \usepackage{float}
-                          
-                          """);
-        Console.WriteLine(@"\begin{document}");
-        visitor.VisitDocument(context);
-        Console.WriteLine(@"\end{document}");
+        if (!File.Exists(inputPath))
+        {
+            Console.WriteLine("Nieprawidłowa ścieżka do pliku.");
+            return;
+        }
+
+        if (!outputPath.EndsWith(".tex", StringComparison.OrdinalIgnoreCase))
+        {
+            outputPath += ".tex";
+        }
+
+        MdConverter mdConverter = new(inputPath, outputPath);
+        mdConverter.ConvertToLatex();
+
+        Console.WriteLine($"Wynik zapisano do {outputPath}");
     }
 }

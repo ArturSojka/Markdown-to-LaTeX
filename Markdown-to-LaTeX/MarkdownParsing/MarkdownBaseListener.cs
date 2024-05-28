@@ -631,6 +631,18 @@ public partial class MarkdownBaseListener : IMarkdownListener {
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitImageLine([NotNull] Markdown.ImageLineContext context) { }
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="Markdown.linkLine"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterLinkLine([NotNull] Markdown.LinkLineContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="Markdown.linkLine"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitLinkLine([NotNull] Markdown.LinkLineContext context) { }
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="Markdown.textLine"/>.
 	/// <para>The default implementation does nothing.</para>
 	/// </summary>
@@ -726,6 +738,18 @@ public partial class MarkdownBaseListener : IMarkdownListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	public virtual void ExitFencedText([NotNull] Markdown.FencedTextContext context) { }
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="Markdown.codeText"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void EnterCodeText([NotNull] Markdown.CodeTextContext context) { }
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="Markdown.codeText"/>.
+	/// <para>The default implementation does nothing.</para>
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	public virtual void ExitCodeText([NotNull] Markdown.CodeTextContext context) { }
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="Markdown.link"/>.
 	/// <para>The default implementation does nothing.</para>

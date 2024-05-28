@@ -330,6 +330,12 @@ public interface IMarkdownVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <return>The visitor result.</return>
 	Result VisitImageLine([NotNull] Markdown.ImageLineContext context);
 	/// <summary>
+	/// Visit a parse tree produced by <see cref="Markdown.linkLine"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitLinkLine([NotNull] Markdown.LinkLineContext context);
+	/// <summary>
 	/// Visit a parse tree produced by <see cref="Markdown.textLine"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -377,6 +383,12 @@ public interface IMarkdownVisitor<Result> : IParseTreeVisitor<Result> {
 	/// <param name="context">The parse tree.</param>
 	/// <return>The visitor result.</return>
 	Result VisitFencedText([NotNull] Markdown.FencedTextContext context);
+	/// <summary>
+	/// Visit a parse tree produced by <see cref="Markdown.codeText"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	/// <return>The visitor result.</return>
+	Result VisitCodeText([NotNull] Markdown.CodeTextContext context);
 	/// <summary>
 	/// Visit a parse tree produced by <see cref="Markdown.link"/>.
 	/// </summary>

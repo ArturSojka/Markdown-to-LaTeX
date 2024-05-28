@@ -528,6 +528,16 @@ public interface IMarkdownListener : IParseTreeListener {
 	/// <param name="context">The parse tree.</param>
 	void ExitImageLine([NotNull] Markdown.ImageLineContext context);
 	/// <summary>
+	/// Enter a parse tree produced by <see cref="Markdown.linkLine"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterLinkLine([NotNull] Markdown.LinkLineContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="Markdown.linkLine"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitLinkLine([NotNull] Markdown.LinkLineContext context);
+	/// <summary>
 	/// Enter a parse tree produced by <see cref="Markdown.textLine"/>.
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
@@ -607,6 +617,16 @@ public interface IMarkdownListener : IParseTreeListener {
 	/// </summary>
 	/// <param name="context">The parse tree.</param>
 	void ExitFencedText([NotNull] Markdown.FencedTextContext context);
+	/// <summary>
+	/// Enter a parse tree produced by <see cref="Markdown.codeText"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void EnterCodeText([NotNull] Markdown.CodeTextContext context);
+	/// <summary>
+	/// Exit a parse tree produced by <see cref="Markdown.codeText"/>.
+	/// </summary>
+	/// <param name="context">The parse tree.</param>
+	void ExitCodeText([NotNull] Markdown.CodeTextContext context);
 	/// <summary>
 	/// Enter a parse tree produced by <see cref="Markdown.link"/>.
 	/// </summary>
