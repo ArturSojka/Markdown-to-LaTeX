@@ -65,7 +65,7 @@ Skaner i parser były realizowane za pomocą generatora ANTLR (ANother Tool for 
   - [Getting Started with ANTLR in C#](https://tomassetti.me/getting-started-with-antlr-in-csharp/)
   - [Listeners and Visitors](https://tomassetti.me/listeners-and-visitors/)
 
-## Kod Preprocesora
+# Kod Preprocesora
 
 ### Namespace Markdown_to_LaTeX
 
@@ -216,8 +216,7 @@ Code : '`';
 Digit : [0-9];
 Other : .;
 ```
-
-### Parser Markdown
+ # Parser Markdown
 
 ```antlr
 parser grammar Markdown;
