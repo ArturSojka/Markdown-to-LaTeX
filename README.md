@@ -131,7 +131,7 @@ public class MarkdownPreprocessor
 }
 ```
 
-### Lexer MarkdownLexer
+# Opis tokenów
 
 ```antlr
 lexer grammar MarkdownLexer;
