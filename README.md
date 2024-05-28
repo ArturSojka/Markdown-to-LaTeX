@@ -17,7 +17,7 @@ Używana przez nas gramatyka znajduje się w pliku [Markdown.g4](https://github.
 
 # Instrukcja Obsługi Programu
 
-Program MdToLatex konwertuje pliki w formacie Markdown na pliki w formacie LaTeX. Program można uruchomić z wiersza poleceń, podając odpowiednie argumenty.
+Program Markdown-To-Latex konwertuje pliki w formacie Markdown na pliki w formacie LaTeX. Program można uruchomić z wiersza poleceń, podając odpowiednie argumenty.
 
 ### Użycie
 
