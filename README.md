@@ -203,7 +203,7 @@ Code : '`';
 Digit : [0-9];
 Other : .;
 ```
- # Parser Markdown
+ ### Parser Markdown
 
 ```antlr
 parser grammar Markdown;
@@ -313,6 +313,177 @@ link : urlLink | textLink;
 urlLink : LT urlText GT;
 textLink : LBRACKET displayText RBRACKET LPAREN linkText RPAREN;
 ```
+
+
+## Lista produkcji z Markdown do LaTeX
+
+### Nagłówki (Headers)
+- **Markdown**: `# Header 1`, `## Header 2`, `### Header 3`, itd.
+- **LaTeX**:
+  ```latex
+  \section{Header 1}
+  \subsection{Header 2}
+  \subsubsection{Header 3}
+  ```
+
+### Listy nieuporządkowane (Unordered Lists)
+- **Markdown**: `- Item 1`, `* Item 1`, `+ Item 1`
+- **LaTeX**:
+  ```latex
+  \begin{itemize}
+      \item Item 1
+      \item Item 2
+  \end{itemize}
+  ```
+
+### Listy uporządkowane (Ordered Lists)
+- **Markdown**: `1. Item 1`, `2. Item 2`
+- **LaTeX**:
+  ```latex
+  \begin{enumerate}
+      \item Item 1
+      \item Item 2
+  \end{enumerate}
+  ```
+
+### Cytaty (Blockquotes)
+- **Markdown**: `> This is a quote`
+- **LaTeX**:
+  ```latex
+  \begin{quote}
+  This is a quote
+  \end{quote}
+  ```
+
+### Kod (Code)
+- **Markdown**:
+  ```markdown
+  `inline code`
+  ```
+  ```markdown
+  ```
+  block code
+  ```
+- **LaTeX**:
+  ```latex
+  \texttt{inline code}
+  ```
+  ```latex
+  \begin{verbatim}
+  block code
+  \end{verbatim}
+  ```
+
+### Kursywa (Italic)
+- **Markdown**: `*italic*` lub `_italic_`
+- **LaTeX**:
+  ```latex
+  \textit{italic}
+  ```
+
+### Pogrubienie (Bold)
+- **Markdown**: `**bold**` lub `__bold__`
+- **LaTeX**:
+  ```latex
+  \textbf{bold}
+  ```
+
+### Linki (Links)
+- **Markdown**: `[link text](http://example.com)`
+- **LaTeX**:
+  ```latex
+  \href{http://example.com}{link text}
+  ```
+
+### Obrazy (Images)
+- **Markdown**: `![alt text](image.jpg)`
+- **LaTeX**:
+  ```latex
+  \begin{figure}[h]
+      \centering
+      \includegraphics[width=\linewidth]{image.jpg}
+      \caption{alt text}
+  \end{figure}
+  ```
+
+### Linie poziome (Horizontal Rules)
+- **Markdown**: `---`, `***`, `___`
+- **LaTeX**:
+  ```latex
+  \hrule
+  ```
+
+### Tabele (Tables)
+- **Markdown**:
+  ```markdown
+  | Header 1 | Header 2 |
+  | -------- | -------- |
+  | Cell 1   | Cell 2   |
+  ```
+- **LaTeX**:
+  ```latex
+  \begin{tabular}{|c|c|}
+  \hline
+  Header 1 & Header 2 \\
+  \hline
+  Cell 1 & Cell 2 \\
+  \hline
+  \end{tabular}
+  ```
+
+### Zagnieżdżone elementy (Nested Elements)
+- **Markdown**:
+  ```markdown
+  - Item 1
+    - Subitem 1
+      - Subsubitem 1
+  ```
+- **LaTeX**:
+  ```latex
+  \begin{itemize}
+      \item Item 1
+      \begin{itemize}
+          \item Subitem 1
+          \begin{itemize}
+              \item Subsubitem 1
+          \end{itemize}
+      \end{itemize}
+  \end{itemize}
+  ```
+
+### Matematyka liniowa (Inline Math)
+- **Markdown**: `$inline math$`
+- **LaTeX**:
+  ```latex
+  $inline math$
+  ```
+
+### Matematyka blokowa (Block Math)
+- **Markdown**:
+  ```markdown
+  $$
+  block math
+  $$
+  ```
+- **LaTeX**:
+  ```latex
+  \[
+  block math
+  \]
+  ```
+
+### Przypisy dolne (Footnotes)
+- **Markdown**:
+  ```markdown
+  Here is a footnote reference[^1].
+
+  [^1]: Here is the footnote.
+  ```
+- **LaTeX**:
+  ```latex
+  Here is a footnote reference\footnote{Here is the footnote.}.
+  ```
+
 # Instrukcja Obsługi Programu MdToLatex
 
 Program MdToLatex konwertuje pliki w formacie Markdown na pliki w formacie LaTeX. Program można uruchomić z wiersza poleceń, podając odpowiednie argumenty.
